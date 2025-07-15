@@ -141,20 +141,21 @@
       <!--  Performance Metrics Table -->
        <section>
         <h2>Tatua Implementation Results</h2>
-        <table>
+        <table  aria-describedby="table-desc-1">
           <caption>Tatua Implementation Results - Before vs After Comparison</caption>
+          <p id="table-desc-1" hidden>
+              Comparison of key support performance metrics before and after using Tatua
+            </p>
           <thead>
             <tr>
-              <th>Metric</th>
-              <th>Before Tatua</th>
-              <th>After Tatua</th>
-              <th>Improvement</th>
-            
+              <th scope="col">Metric</th>
+              <th scope="col">Before Tatua</th>
+              <th scope="col">After Tatua</th>
+              <th scope="col">Improvement</th>            
             </tr>
           </thead>
            <tbody>
             <tr>
-              
               <td>Average Response Time</td>
               <td>6.5 hours</td>
               <td>1.8 hours</td>
@@ -209,8 +210,9 @@
       <!-- Feature Comparison Table -->
       <section>
         <h2>Tatua Pricing Plans</h2>
-        <table summary="Comparison of features offered across Basic, Pro, and Enterprise plans.">
+        <table aria-describedby="table-desc-2">
           <caption>Tatua Pricing Plans - Feature Comparison</caption>
+            <p id="table-desc-2" hidden>Comparison of features offered across Basic, Pro, and Enterprise plans.</p>
           <thead>
             <tr>
               <th scope="col">Feature</th>
@@ -305,8 +307,9 @@
       <!-- Industry Metrics Table -->
        <section>
         <h2>Industry Metrics</h2>
-        <table>
+        <table aria-describedby="table-desc-3">
           <caption>Industry Benchmarks vs Tatua Customer Performance</caption>
+          <p id="table-desc-3" hidden>Comparison of average response times across industries with and without Tatua.</p>
           <thead>
           <tr>
             <th scope="col">Industry</th>

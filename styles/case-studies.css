@@ -9,3 +9,26 @@ blockquote{
 blockquote footer {
     font-weight: normal;
 }
+
+table{
+    margin: auto;
+    width:70%;
+    align-items: center;
+    justify-content: center;
+}
+table caption {
+    font-weight: bold;
+    text-decoration: underline;
+    padding-bottom:1rem;
+}
+
+table, th, td {
+    border: 1px solid rgb(133, 133, 133);
+    border-collapse:collapse ;
+    padding: 0.3rem;
+}
+
+thead {
+    background-color: #e0e0e0;
+}
+

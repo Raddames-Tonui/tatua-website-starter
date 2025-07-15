@@ -1,0 +1,11 @@
+
+blockquote{
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    text-align: center;
+    font-weight: bold;
+}
+blockquote footer {
+    font-weight: normal;
+}

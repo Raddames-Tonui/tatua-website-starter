@@ -1,0 +1,128 @@
+
+
+/* ---------------ABOUT------------------- */
+
+
+.header-section{
+    text-align: center;
+    padding: 0.5rem 2rem;
+}
+
+.header-section h1{
+    font-size:x-large;
+}
+.header-section h2 {
+    color: var(--text);
+}
+
+.company-story p{
+    color: var(--text);
+    font-size: 1rem;
+}
+
+.team-section{
+    background-color: var(--accent);
+    padding: 2rem;
+    text-align: center;
+    min-height: 100vh;
+}
+
+/*  Team Profiles  */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  justify-items: center; 
+  align-items: stretch;  
+  margin-top: 1.5rem;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  height: 100%; 
+  background: #fff;
+  border-radius: var(--radius, 8px);
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+article h3 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+dl {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+dt {
+  font-weight: 600;
+  color: #222;
+}
+
+dd {
+  margin: 0;
+  padding-left: 1rem;
+  color: var(--text);
+}
+
+
+/*  Company Stats  */
+.company-stats {
+  list-style: none;
+  padding: 0;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.company-stats li {
+  text-align: center;
+  flex-direction: column;
+  padding: 1rem;
+  flex-wrap: wrap;
+  font-weight: 500;
+  border-radius: var(--radius);
+  /* box-shadow: 0 1px 3px rgba(0,0,0,0.05); */
+}
+
+.label {
+  font-weight: bold;
+  color: var(--text);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.value {
+  font-weight:600;
+  color: var(--primary);
+  margin-top: 0.5rem;
+}
+
+
+/*  Company Values  */
+.Values-section {
+    background-color: var(--accent);
+    padding: 2rem;
+    text-align: center;
+    /* min-height: 100vh; */
+}
+.company-values {
+  list-style: none;
+  text-align: center;
+  padding-left: 2rem;
+  margin-top: 1rem;
+}
+
+.company-values li {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}

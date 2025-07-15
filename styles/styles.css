@@ -13,6 +13,10 @@ body {
   color: var(--text);
   line-height: 1.6;
 }
+h1, h2{
+    color: var(--primary);
+    text-align: center;
+}
 
 header, footer {
   background: var(--accent);
@@ -40,6 +44,11 @@ header, footer {
   color: var(--text);
   text-decoration: none;
   font-weight: 600;
+}
+
+.nav-links li a[aria-current="page"] {
+    color: var(--primary);
+    border-bottom: 2px solid #624788;
 }
 
 .hero {
@@ -119,4 +128,165 @@ footer {
   font-size: 0.9rem;
   font-weight: bold;
   background: var(--accent);
+}
+
+
+/* ---------------ABOUT------------------- */
+
+/* Bread crumb */
+.breadcrumb{
+    font-size: 0.9rem;
+    margin: 1rem 2rem;
+    color: #000;
+}
+
+.breadcrumb ol {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.breadcrumb li {
+    display: flex;
+    align-items: center;
+    font-weight:600;
+    color: var(--primary);
+}
+
+/* Separator using ::after, except for the last one */
+.breadcrumb li::after{
+    content: ">";
+    padding-left: 0.5rem ;
+}
+
+.breadcrumb li:last-child::after {
+    content: "";
+}
+
+
+.breadcrumb a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+
+.company-story{
+    text-align: center;
+    padding: 1rem 2rem;
+}
+.company-story p{
+    color: var(--text);
+    font-size: 1rem;
+}
+
+.team-section{
+    background-color: var(--accent);
+    padding: 2rem;
+    text-align: center;
+    min-height: 100vh;
+}
+
+/*  Team Profiles  */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  justify-items: center; 
+  align-items: stretch;  
+  margin-top: 1.5rem;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  height: 100%; 
+  background: #fff;
+  border-radius: var(--radius, 8px);
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+article h3 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+dl {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+dt {
+  font-weight: 600;
+  color: #222;
+}
+
+dd {
+  margin: 0;
+  padding-left: 1rem;
+  color: var(--text);
+}
+
+
+/*  Company Stats  */
+.company-stats {
+  list-style: none;
+  padding: 0;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.company-stats li {
+  text-align: center;
+  flex-direction: column;
+  padding: 1rem;
+  flex-wrap: wrap;
+  font-weight: 500;
+  border-radius: var(--radius);
+  /* box-shadow: 0 1px 3px rgba(0,0,0,0.05); */
+}
+
+.label {
+  font-weight: bold;
+  color: var(--text);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.value {
+  font-weight:600;
+  color: var(--primary);
+  margin-top: 0.5rem;
+}
+
+
+/*  Company Values  */
+.Values-section {
+    background-color: var(--accent);
+    padding: 2rem;
+    text-align: center;
+    /* min-height: 100vh; */
+}
+.company-values {
+  list-style: none;
+  text-align: center;
+  padding-left: 2rem;
+  margin-top: 1rem;
+}
+
+.company-values li {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
 }

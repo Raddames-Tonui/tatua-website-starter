@@ -153,8 +153,8 @@ Based on our customer data, here's what companies typically save:
 
 ### ROI Metrics
 - **Average cost savings:** $2,400 per agent per month
-- **Productivity improvement:** 87% increase in tickets resolved
-- **Customer retention:** 15% improvement on average
+- **Productivity improvement:** 87% increase in tickets resolved15% improvement on average
+- **Customer retention:** 
 - **Implementation time:** 2-4 weeks typical setup
 
 ## Testimonials Section

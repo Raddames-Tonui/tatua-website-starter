@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Tatua Solutions</title>
+  <meta name="description" content="Get in touch with Tatua's team. Start your free trial or schedule a demo to see how we can transform your support operations." />
+  <link rel="stylesheet" href="/styles/styles.css" />
+  <link rel="stylesheet" href="/styles/contact.css">
+  <link rel="icon" type="image/x-icon" href="/assets/tatua-favicon.png" />
+</head>
+<body>
+  <!-- Header Navigation -->
+  <header>
+    <nav class="navbar" aria-label="Main navigation">
+      <a href="homepage.html" class="logo-link" aria-label="Tatua Home">
+        <img src="./assets/tatua-logo.png" alt="Tatua logo" class="logo" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+        <li><a href="case-studies.html">Case Studies</a></li>
+        <li><a href="email-templates.html">Email</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="homepage.html">Home</a></li>
+        <li><span aria-current="page">Contact</span></li>
+      </ol>
+    </nav>
+
+    <!-- Intro Section -->
+    <section class="in-touch">
+      <h1>Get in Touch</h1>
+      <h2>Ready to transform your support operations?</h2>
+      <p>Our team is here to help you find the perfect solution for your business needs. Whether you're looking to start a trial, need technical support, or want to explore partnership opportunities, we're ready to help.</p>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section aria-labelledby="contact-info-heading">
+      <h2 id="contact-info-heading">Contact Information</h2>
+      <address>
+        <p><strong>Tatua Solutions Inc.</strong><br />
+        123 Innovation Drive, Suite 400<br />
+        San Francisco, CA 94105</p>
+
+        <p><strong>Phone:</strong><br />
+        <a href="tel:+15551234567">Main: +1 (555) 123-4567</a><br />
+        <a href="tel:+15551234568">Sales: +1 (555) 123-4568</a><br />
+        <a href="tel:+15551234569">Support: +1 (555) 123-4569</a></p>
+
+        <p><strong>Email:</strong><br />
+        <a href="mailto:hello@tatua.com">hello@tatua.com</a><br />
+        <a href="mailto:sales@tatua.com">sales@tatua.com</a><br />
+        <a href="mailto:support@tatua.com">support@tatua.com</a><br />
+        <a href="mailto:partners@tatua.com">partners@tatua.com</a></p>
+
+        <p><strong>Business Hours:</strong><br />
+        Monday - Friday: 8:00 AM - 6:00 PM PST<br />
+        Saturday: 10:00 AM - 2:00 PM PST<br />
+        Sunday: Closed</p>
+
+        <p><strong>Emergency Support:</strong><br />
+        24/7 support available for Enterprise customers</p>
+      </address>
+    </section>
+
+    <!-- Contact Form -->
+    <section aria-labelledby="form-heading">
+      <h2 id="form-heading">Send Us a Message</h2>
+      <form action="/submit-contact" method="POST" novalidate>
+        <!-- Personal Information -->
+        <fieldset>
+          <legend>Contact Information</legend>
+
+          <label for="fullName">Full Name *</label>
+          <input type="text" id="fullName" name="fullName" required minlength="2" maxlength="50" placeholder="Enter your full name" />
+
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" required placeholder="you@company.com" />
+
+          <label for="company">Company Name *</label>
+          <input type="text" id="company" name="company" required minlength="2" maxlength="100" placeholder="Your company name" />
+
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" />
+        </fieldset>
+
+        <!-- Inquiry Details -->
+        <fieldset>
+          <legend>Tell us about your needs</legend>
+
+          <label for="inquiry">Inquiry Type *</label>
+          <select id="inquiry" name="inquiry" required>
+            <option value="">Please select...</option>
+            <option>Sales Inquiry</option>
+            <option>Technical Support</option>
+            <option>Partnership Opportunity</option>
+            <option>General Question</option>
+            <option>Demo Request</option>
+          </select>
+
+          <label for="size">Company Size *</label>
+          <select id="size" name="size" required>
+            <option value="">Please select...</option>
+            <option>1–10 employees</option>
+            <option>11–50 employees</option>
+            <option>51–200 employees</option>
+            <option>201–1000 employees</option>
+            <option>1000+ employees</option>
+          </select>
+
+          <label for="system">Current Ticketing System</label>
+          <select id="system" name="system">
+            <option>None currently</option>
+            <option>Zendesk</option>
+            <option>ServiceNow</option>
+            <option>Freshdesk</option>
+            <option>Jira Service Management</option>
+            <option>Other</option>
+          </select>
+
+          <label for="budget">Budget Range</label>
+          <select id="budget" name="budget">
+            <option>Under $1,000/month</option>
+            <option>$1,000 – $5,000/month</option>
+            <option>$5,000 – $15,000/month</option>
+            <option>$15,000+/month</option>
+            <option>Enterprise (custom pricing)</option>
+          </select>
+
+          <label for="timeline">Implementation Timeline</label>
+          <select id="timeline" name="timeline">
+            <option>Immediate (within 1 month)</option>
+            <option>1–3 months</option>
+            <option>3–6 months</option>
+            <option>6+ months</option>
+            <option>Just exploring options</option>
+          </select>
+
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" required minlength="10" maxlength="500" rows="5" placeholder="Tell us about your current challenges and what you're looking for in a ticketing solution..."></textarea>
+        </fieldset>
+
+        <!-- Communication Preferences -->
+        <fieldset>
+          <legend>Communication Preferences</legend>
+
+          <fieldset>
+            <legend>Preferred Contact Method *</legend>
+            <label><input type="radio" name="contactMethod" value="Email" required /> Email</label>
+            <label><input type="radio" name="contactMethod" value="Phone" /> Phone</label>
+            <label><input type="radio" name="contactMethod" value="Video Call" /> Video Call</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Best Time to Contact</legend>
+            <label><input type="radio" name="contactTime" value="Morning" /> Morning (9 AM – 12 PM PST)</label>
+            <label><input type="radio" name="contactTime" value="Afternoon" /> Afternoon (12 PM – 5 PM PST)</label>
+            <label><input type="radio" name="contactTime" value="Evening" /> Evening (5 PM – 8 PM PST)</label>
+          </fieldset>
+
+          <label>
+            <input type="checkbox" name="subscribe" />
+            Yes, I'd like to receive product updates and industry insights
+          </label>
+
+          <label>
+            <input type="checkbox" name="terms" required />
+            I agree to the Terms of Service and Privacy Policy
+          </label>
+        </fieldset>
+
+        <!-- Actions -->
+        <fieldset class="action-buttons">
+          <button type="submit">Send Message</button>
+          <button type="reset">Clear Form</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <!-- Office Locations -->
+    <section aria-labelledby="office-heading">
+      <h2 id="office-heading">Visit Our Offices</h2>
+      <div class="office-grid">
+        <address>
+          <strong>San Francisco Headquarters</strong><br />
+          123 Innovation Drive, Suite 400<br />
+          San Francisco, CA 94105<br />
+          Phone: <a href="tel:+15551234567">+1 (555) 123-4567</a>
+        </address>
+
+        <address>
+          <strong>New York Office</strong><br />
+          456 Business Plaza, Floor 12<br />
+          New York, NY 10001<br />
+          Phone: <a href="tel:+15551234570">+1 (555) 123-4570</a>
+        </address>
+      </div>
+    </section>
+
+    <!-- Quick Actions -->
+    <section class="quick-actions-section" aria-labelledby="quick-actions">
+      <h2 id="quick-actions">Quick Actions</h2>
+      <div class="actions">
+        <article>
+          <h3>Start Free Trial</h3>
+          <p>Get up and running in minutes with our 14-day free trial</p>
+        </article>
+        <article>
+          <h3>Schedule Demo</h3>
+          <p>See Tatua in action with a personalized 30-minute demo</p>
+        </article>
+        <article>
+          <h3>Download Resources</h3>
+          <p>Access our implementation guide and best practices documentation</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!--  Footer  -->
+  <footer>
+    <p>&copy; 2025 Tatua Solutions Inc.</p>
+    <p>Email: <a href="mailto:hello@tatua.com">hello@tatua.com</a> | Phone: <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+    <p>123 Innovation Drive, Suite 400, San Francisco, CA 94105</p>
+  </footer>
+</body>
+</html>

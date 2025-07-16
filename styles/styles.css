@@ -6,22 +6,39 @@
   --radius: 6px;
 }
 
+
 body {
   margin: 0;
-  font-family: "aria", sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: var(--background);
   color: var(--text);
   line-height: 1.6;
 }
+
+header {
+    max-height: 10vh;
+    padding: 1rem 2rem;
+    background: var(--accent);
+      border-bottom: 1px solid #ccc;    
+}
+
+footer {
+  text-align: center;
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: bold;
+  background: var(--accent);
+}
+
 h1, h2{
     color: var(--primary);
     text-align: center;
 }
 
-header, footer {
-  background: var(--accent);
-  padding: 1rem 2rem;
+a:hover {
+  text-decoration: underline;
 }
+
 
 .navbar {
   display: flex;
@@ -51,11 +68,58 @@ header, footer {
     border-bottom: 2px solid #624788;
 }
 
+
+
+/* Bread crumb */
+.breadcrumb{
+    font-size: 0.9rem;
+    margin: 1rem 2rem;
+    color: #000;
+}
+
+.breadcrumb ol {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.breadcrumb li {
+    display: flex;
+    align-items: center;
+    font-weight:600;
+    color: var(--primary);
+}
+
+/* Separator using ::after, except for the last one */
+.breadcrumb li::after{
+    content: ">";
+    margin: 0 0.5rem ;
+}
+
+.breadcrumb li:last-child::after {
+    content: "";
+}
+
+
+.breadcrumb a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+
+/* ----------------HOME PAGE--------------------------- */
+
 .hero {
-  height:60vh;
+  min-height: 70vh;
   padding: 4rem 2rem;
   background: var(--accent);
   text-align: center;
+  justify-content: center;
 }
 
 .hero h1 {
@@ -122,60 +186,13 @@ dt {
   font-weight: bold;
 }
 
-footer {
-  text-align: center;
-  color: var(--text);
-  font-size: 0.9rem;
-  font-weight: bold;
-  background: var(--accent);
-}
+
 
 
 /* ---------------ABOUT------------------- */
 
-/* Bread crumb */
-.breadcrumb{
-    font-size: 0.9rem;
-    margin: 1rem 2rem;
-    color: #000;
-}
 
-.breadcrumb ol {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 0.5rem;
-}
-
-.breadcrumb li {
-    display: flex;
-    align-items: center;
-    font-weight:600;
-    color: var(--primary);
-}
-
-/* Separator using ::after, except for the last one */
-.breadcrumb li::after{
-    content: ">";
-    padding-left: 0.5rem ;
-}
-
-.breadcrumb li:last-child::after {
-    content: "";
-}
-
-
-.breadcrumb a {
-  color: var(--primary);
-  text-decoration: none;
-}
-
-.breadcrumb a:hover {
-  text-decoration: underline;
-}
-
-
-.company-story{
+.in-touch, .company-story{
     text-align: center;
     padding: 1rem 2rem;
 }
@@ -290,3 +307,6 @@ dd {
   margin-bottom: 0.75rem;
   line-height: 1.5;
 }
+
+
+/* CONTACT HTML */

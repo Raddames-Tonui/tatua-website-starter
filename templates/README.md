@@ -136,6 +136,19 @@ email-templates/
 └── README.md
 ```
 
+## 🔠 Basic Structure Prefix for Email HTML
+
+Use this standard doctype and root element to maximize compatibility:
+
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+```
+
+This ensures maximum backward compatibility, especially for Microsoft Outlook and older email clients.
+
+
 
 ## 🔍 8. **Testing Your Templates**
 
@@ -177,14 +190,3 @@ To build reliable email templates, think like it’s 2005:
 * Test on **every email client**—not just the browser.
 
 
-## 🔠 Basic Structure Prefix for Email HTML
-
-Use this standard doctype and root element to maximize compatibility:
-
-```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-```
-
-This ensures maximum backward compatibility, especially for Microsoft Outlook and older email clients.

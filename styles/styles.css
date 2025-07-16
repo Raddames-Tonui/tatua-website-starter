@@ -1,9 +1,16 @@
 :root {
   --primary: #624788;
+  --secondary: #DD9707;
   --accent: #F0F4FF;
   --background: #F9F9F9;
   --text: #000000;
   --radius: 6px;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -23,11 +30,15 @@ header {
 
 body > footer {
   text-align: center;
-  color: var(--text);
-  font-size: 0.9rem;
-  font-weight: bold;
-  background: var(--accent);
+  color: var(--background);
+  font-size: 1rem;
+  font-weight: ;
+  background: var(--primary);
   padding:2rem ;
+}
+
+body > footer a{
+  color: #F0F4FF;
 }
 
 h1, h2{
@@ -67,7 +78,6 @@ a:hover {
     color: var(--primary);
     border-bottom: 2px solid #624788;
 }
-
 
 
 /* Bread crumb */
@@ -110,8 +120,3 @@ a:hover {
 .breadcrumb a:hover {
   text-decoration: underline;
 }
-
-
-
-
-/* CONTACT HTML */

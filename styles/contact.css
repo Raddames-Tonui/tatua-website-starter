@@ -1,8 +1,36 @@
+/* Contacts */
+:root {
+  --primary: #624788;
+  --secondary: #DD9707;
+  --accent: #F0F4FF;
+  --background: #F9F9F9;
+  --text: #0e0d0d;
+  --radius: 6px;
+}
+
+.header-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 20vh;
+}
+.header-section h2 {
+  color: var(--text);
+}
+
 
 
 /* Forms */
+.form-heading{
+  background-color: var(--background);
+  padding: 2rem 0;
+  text-align: center;
+  font-size: large;
+}
+
+
 form {
-  background: #fff;
   padding: 2rem;
   border-radius: var(--radius);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);

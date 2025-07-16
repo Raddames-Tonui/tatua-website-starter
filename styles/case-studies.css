@@ -1,18 +1,74 @@
 
+/* Case studies */
+:root {
+  --primary: #624788;
+  --secondary: #DD9707;
+  --accent: #F0F4FF;
+  --background: #F9F9F9;
+  --text: #0e0d0d;
+  --radius: 6px;
+}
+
+body{
+  background-color: var(--accent);
+}
+
+section{
+    padding: 2rem;
+   
+}
+
+.header-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header-section h2{
+    color: var(--text);
+}
+
+hr{
+    color: #afaeae;
+}
+
+.case-studies{
+    margin: auto;
+    @media only screen and (min-width: 720px){
+            width:80%;
+    }
+    align-items: center;
+    justify-content: center;
+}
+.Company-Information{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
 blockquote{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-style: italic;
-    font-size: 1.1rem;
-    margin-top: 0.5rem;
+    font-size: 1rem;
+    margin: 1.25rem 0;
     text-align: center;
     font-weight: bold;
 }
+
 blockquote footer {
     font-weight: normal;
 }
 
+.tables{
+    background-color: var(--background);
+}
+
 table{
     margin: auto;
-    width:70%;
+     @media only screen and (min-width: 720px){
+            width:80%;
+    }
     align-items: center;
     justify-content: center;
 }
@@ -34,4 +90,17 @@ thead {
 
 tr:nth-child(even) {
   background-color: #f5f5f5;
+}
+
+
+.roi-section{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+     @media only screen and (min-width: 720px){
+            width:80%;
+    }
+}
+.roi-section p, .roi-section h2{
+    text-align: start;
 }

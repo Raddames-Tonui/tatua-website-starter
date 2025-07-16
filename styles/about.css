@@ -1,16 +1,31 @@
 
 
 /* ---------------ABOUT------------------- */
+:root {
+  --primary: #624788;
+  --secondary: #DD9707;
+  --accent: #F0F4FF;
+  --background: #F9F9F9;
+  --text: #0e0d0d;
+  --radius: 6px;
+}
 
+body{
+  background-color: var(--accent);
+}
 
-.header-section{
+.header-section, .company-story{
     text-align: center;
-    padding: 0.5rem 2rem;
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .header-section h1{
     font-size:x-large;
 }
+
 .header-section h2 {
     color: var(--text);
 }
@@ -18,13 +33,14 @@
 .company-story p{
     color: var(--text);
     font-size: 1rem;
+    
 }
 
 .team-section{
-    background-color: var(--accent);
+    background-color: var(--background);
     padding: 2rem;
     text-align: center;
-    min-height: 100vh;
+    min-height: 60vh;
 }
 
 /*  Team Profiles  */
@@ -44,36 +60,51 @@ article {
   background: #fff;
   border-radius: var(--radius, 8px);
   padding: 1rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 0  0 1px rgba(0,0,0,0.2);
 }
 
 article h3 {
   color: var(--primary);
-  margin-bottom: 0.5rem;
   font-size: 1.25rem;
+  margin-bottom: 0.3rem;
 }
 
-dl {
+article h4 {
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 700;
+  /* margin-bottom:0.75rem ; */
+}
+
+article dl {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  margin: 0;
+  margin-top: 1.25rem;
+  gap: 0.55rem;
 }
 
-dt {
+article dt {
   font-weight: 600;
   color: #222;
 }
 
-dd {
+article dd {
   margin: 0;
   padding-left: 1rem;
+  color: var(--text);
+}
+article dd a {
   color: var(--text);
 }
 
 
 /*  Company Stats  */
-.company-stats {
+.company-stats{
+  margin: 2rem 0;
+  background-color: var(--accent);
+}
+
+.company-stats ul {
   list-style: none;
   padding: 0;
   gap: 0.5rem;
@@ -91,7 +122,6 @@ dd {
   flex-wrap: wrap;
   font-weight: 500;
   border-radius: var(--radius);
-  /* box-shadow: 0 1px 3px rgba(0,0,0,0.05); */
 }
 
 .label {
@@ -110,19 +140,23 @@ dd {
 
 /*  Company Values  */
 .Values-section {
-    background-color: var(--accent);
-    padding: 2rem;
-    text-align: center;
-    /* min-height: 100vh; */
+  background-color: var(--background);
+  padding: 2rem 0;
+  text-align: center;
+  font-size: large;
+}
+
+.Values-section dt{
+  font-weight: bold;
+  gap: 2rem;
 }
 .company-values {
   list-style: none;
   text-align: center;
-  padding-left: 2rem;
   margin-top: 1rem;
 }
 
-.company-values li {
-  margin-bottom: 0.75rem;
+.Values-section dt {
+  margin-top: 0.75rem;
   line-height: 1.5;
 }

@@ -1,16 +1,34 @@
 /* ----------------HOME PAGE--------------------------- */
+:root {
+  --primary: #624788;
+  --secondary: #DD9707;
+  --accent: #F0F4FF;
+  --background: #F9F9F9;
+  --text: #000000;
+  --radius: 6px;
+}
 
 .hero {
-  min-height: 70vh;
-  padding: 4rem 2rem;
+  min-height: 100vh;
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
   background: var(--accent);
   text-align: center;
-  justify-content: center;
 }
 
 .hero h1 {
   color: var(--primary);
   font-size: 2.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.hero-buttons{
+  margin: 3rem;
 }
 
 .hero-buttons .btn {
@@ -35,11 +53,13 @@
 .services, .stats, .values {
   padding: 3rem 2rem;
   background: white;
+  min-height: 20vh;
 }
 
 .services h2, .stats h2 {
     text-align: center;
     color: #624788;
+    margin-bottom:1.2rem ;
 }
 
 .service-cards {
@@ -51,10 +71,16 @@
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 1.5rem;
+  height: 20vh;
   background: var(--accent);
   border-radius: var(--radius);
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 6px rgba(0, 0, 0, );
+  text-align: center;
 }
 
 .stats-list {
@@ -69,7 +95,14 @@ dl {
 }
 
 dt {
+  font-size: large;
   font-weight: bold;
+  color: var(--text);
+}
+
+dd {
+  font-weight: bold;
+  color: var(--primary);
 }
 
 

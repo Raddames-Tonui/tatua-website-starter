@@ -67,6 +67,10 @@ body{
     }   
 }
 
+.breadcrumb{
+    padding-left: 0;
+}
+
 .header-section{
     display: flex;
     flex-direction: column;
@@ -88,25 +92,22 @@ section {
 /* LAYOUT WRAPPER */
 .layout-wrapper {
     display: grid;
-    grid-template-areas:
-        
-        "sidebar main"
-    ;
-    grid-template-columns: 1fr 3fr;
-    gap: 10px;
-    /* min-height: calc(100vh - 14rem); */
-}
-
-.sidebar {
-    position: sticky;
-    top: 0;
-    left: 0;
-    /* width: 300px; */
-    padding: 30px 20px;
-    border-right: 1px solid var(--accent-700);
+    grid-template-columns: 250px 1fr;
+    grid-template-areas: "sidebar main";
+    min-height: 100vh;
 }
 
 /* Sidebar components */
+.sidebar {
+    background-color: var(--accent-50);
+    grid-area: sidebar;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    padding: 1rem;
+    border-right: 1px solid var(--accent-700);
+}
+
 .sidebar-section {
     margin-bottom: 30px;
 }
@@ -141,6 +142,36 @@ section {
 }
 
 
+[id] {
+  scroll-margin-top: 80px; 
+  /* This ensures that when the browser scrolls to an anchor, 
+  it leaves room above the element. */
+}
+
+
+/* Blog Content area */
+.main {
+    grid-area: main;
+    overflow-y: auto;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .layout-wrapper {
+        grid-template-areas: 
+            "main"
+            "sidebar";
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar{
+        position: static;
+        height: auto;
+        border-right: none;
+        border-top: 1px solid #ccc;
+        
+    }
+}
 
 
 /* TABLES */

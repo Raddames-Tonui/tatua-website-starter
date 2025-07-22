@@ -78,7 +78,7 @@ body > footer {
   text-align: center;
   color: white;
   font-size: 1rem;
-  background: var(--primary-700);
+  background: var(--accent-700);
   padding:2rem ;
 }
 

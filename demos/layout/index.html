@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two-Column Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>My Website</h1>
+            <nav class="navigation">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-link">Services</a>
+                <a href="#" class="nav-link">Contact</a>
+            </nav>
+        </header>
+        
+        <div class="layout-wrapper">
+            <aside class="sidebar">
+                <div class="sidebar-section">
+                    <h3>Categories</h3>
+                    <ul class="category-list">
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Design</a></li>
+                        <li><a href="#">JavaScript</a></li>
+                        <li><a href="#">CSS</a></li>
+                        <li><a href="#">React</a></li>
+                    </ul>
+                </div>
+                
+                <div class="sidebar-section">
+                    <h3>Recent Posts</h3>
+                    <div class="recent-post">
+                        <h4>Understanding Flexbox</h4>
+                        <p>A comprehensive guide to modern CSS layouts...</p>
+                    </div>
+                    <div class="recent-post">
+                        <h4>JavaScript ES6 Features</h4>
+                        <p>Exploring the latest JavaScript features...</p>
+                    </div>
+                </div>
+            </aside>
+            
+            <main class="main-content">
+                <article class="post">
+                    <h2>Creating Responsive Layouts</h2>
+                    <p class="post-meta">Published on March 15, 2024</p>
+                    <p>Modern web development requires creating layouts that work across all devices. In this article, we'll explore different techniques for building responsive, maintainable layouts.</p>
+                    
+                    <h3>The Evolution of CSS Layout</h3>
+                    <p>CSS layout has evolved significantly over the years. We started with table-based layouts, moved to float-based systems, and now have powerful tools like Flexbox and Grid.</p>
+                    
+                    <h3>Best Practices</h3>
+                    <ul>
+                        <li>Use semantic HTML for better accessibility</li>
+                        <li>Design mobile-first for better performance</li>
+                        <li>Choose the right layout method for each use case</li>
+                        <li>Test across different devices and browsers</li>
+                    </ul>
+                </article>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

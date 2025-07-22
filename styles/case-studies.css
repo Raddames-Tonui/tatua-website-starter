@@ -93,14 +93,12 @@ tr:nth-child(even) {
 }
 
 
-.roi-section{
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-     @media only screen and (min-width: 720px){
-            width:80%;
-    }
+/* ROI Section */
+.roi-section {
+    display: block;
+    margin: 0 auto;
 }
-.roi-section p, .roi-section h2{
-    text-align: start;
+
+.roi-section ul {
+
 }

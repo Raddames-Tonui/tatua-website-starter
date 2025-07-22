@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Deep Dive: Flex vs Grid</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      line-height: 1.6;
+      padding: 2rem;
+      background: #f9f9f9;
+    }
+
+    h1, h2 {
+      color: #333;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+      padding: 1.5rem;
+      background: #fff;
+      border-left: 5px solid #0077cc;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+
+    /* FLEX SECTION */
+    .flex-container {
+      display: flex; /* Enables Flexbox */
+      gap: 1rem; /* Space between items */
+      justify-content: space-between; /* Distribute items evenly */
+      align-items: center; /* Align items vertically */
+      flex-wrap: wrap; /* Allow wrapping to next line */
+      background: #e3f2fd;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    .flex-item {
+      background: #42a5f5;
+      color: white;
+      padding: 1.5rem;
+      border-radius: 6px;
+      flex: 1 1 200px; /* Grow, shrink, base width */
+      text-align: center;
+    }
+
+    /* GRID SECTION */
+    .grid-container {
+      display: grid; /* Enables Grid */
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+      gap: 1rem;
+      background: #ede7f6;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    .grid-item {
+      background: #7e57c2;
+      color: white;
+      padding: 1.5rem;
+      border-radius: 6px;
+      text-align: center;
+    }
+
+    code {
+      background: #f4f4f4;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.95em;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🧩 In-Depth Guide: Flex vs Grid</h1>
+
+  <!-- FLEXBOX SECTION -->
+  <div class="section">
+    <h2>🔹 Flexbox Layout</h2>
+    <p><strong>Use case:</strong> One-dimensional layout (either row or column).</p>
+    <p>Example using: <code>display: flex</code> with <code>justify-content</code>, <code>align-items</code>, <code>flex-wrap</code>, and <code>flex</code>.</p>
+
+    <div class="flex-container">
+      <div class="flex-item">Flex 1</div>
+      <div class="flex-item">Flex 2</div>
+      <div class="flex-item">Flex 3</div>
+      <div class="flex-item">Flex 4</div>
+    </div>
+
+    <ul>
+      <li><code>flex-wrap: wrap</code> allows wrapping when space is tight.</li>
+      <li><code>justify-content: space-between</code> spreads items evenly.</li>
+      <li><code>align-items: center</code> aligns them vertically in the middle.</li>
+      <li><code>flex: 1 1 200px</code> makes each item flexible.</li>
+    </ul>
+  </div>
+
+  <!-- GRID SECTION -->
+  <div class="section">
+    <h2>🔸 CSS Grid Layout</h2>
+    <p><strong>Use case:</strong> Two-dimensional layout (rows and columns).</p>
+    <p>Example using: <code>display: grid</code> with <code>grid-template-columns</code> and <code>auto-fit/minmax</code>.</p>
+
+    <div class="grid-container">
+      <div class="grid-item">Grid A</div>
+      <div class="grid-item">Grid B</div>
+      <div class="grid-item">Grid C</div>
+      <div class="grid-item">Grid D</div>
+      <div class="grid-item">Grid E</div>
+      <div class="grid-item">Grid F</div>
+    </div>
+
+    <ul>
+      <li><code>grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))</code> creates responsive columns.</li>
+      <li>Each <code>grid-item</code> auto-expands to fill available space.</li>
+      <li>Grid is excellent for dashboard layouts, cards, galleries.</li>
+    </ul>
+  </div>
+
+</body>
+</html>

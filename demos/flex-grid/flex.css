@@ -1,0 +1,54 @@
+body {
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+section {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+  border: 1px dashed #aaa;
+  padding: 10px;
+}
+
+.box {
+  background-color: #3498db;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  flex: 1;
+}
+
+/* Specific heights to show align-items */
+.tall {
+  height: 100px;
+}
+
+.medium {
+  height: 60px;
+}
+
+/* Different layout examples */
+
+.flex-row {
+  /* Default: row */
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+  height: 200px;
+}
+
+.flex-space-between {
+  justify-content: space-between;
+}
+
+.flex-align-center {
+  align-items: center;
+  height: 120px;
+}

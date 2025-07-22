@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Display Playground</title>
+  <!-- Link to the external stylesheet -->
+  <link rel="stylesheet" href="display.css" />
+</head>
+<body>
+
+  <!-- Page heading -->
+  <h1>🎨 CSS Display Playground</h1>
+
+  <!-- SECTION 1: BLOCK -->
+  <!-- Block elements take full width and stack vertically -->
+  <div class="section">
+    <h2>1. display: block</h2>
+    <div class="block-example">
+      <div class="box">Block 1</div>
+      <div class="box">Block 2</div>
+    </div>
+    <p>Block elements take full width and stack vertically.</p>
+  </div>
+
+  <!-- SECTION 2: INLINE -->
+  <!-- Inline elements flow in-line (side by side), and ignore width/height -->
+  <div class="section">
+    <h2>2. display: inline</h2>
+    <div class="inline-example">
+      <span class="inline-box">Inline 1</span>
+      <span class="inline-box">Inline 2</span>
+      <span class="inline-box">Inline 3</span>
+    </div>
+    <p>Inline elements flow within the same line and ignore width/height.</p>
+  </div>
+
+  <!-- SECTION 3: INLINE-BLOCK -->
+  <!-- Behaves like inline, but allows width and height to be respected -->
+  <div class="section">
+    <h2>3. display: inline-block</h2>
+    <div class="inline-block-example">
+      <div class="ib-box">Inline-Block 1</div>
+      <div class="ib-box">Inline-Block 2</div>
+      <div class="ib-box">Inline-Block 3</div>
+    </div>
+    <p>Inline-block elements sit inline but accept width and height.</p>
+  </div>
+
+  <!-- SECTION 4: NONE -->
+  <!-- This box is hidden entirely using display: none -->
+  <div class="section">
+    <h2>4. display: none</h2>
+    <p>The box below is hidden using <code>display: none</code>.</p>
+    <p>You can check in dev tools to see it:</p>
+    <div class="hidden-box">You shouldn’t see me!</div>
+  </div>
+
+  <!-- SECTION 5: FLEX -->
+  <!-- A flexible row layout that distributes space between items -->
+  <div class="section">
+    <h2>5. display: flex</h2>
+    <div class="flex-container">
+      <div class="flex-item">Flex 1</div>
+      <div class="flex-item">Flex 2</div>
+      <div class="flex-item">Flex 3</div>
+    </div>
+    <p>Flex allows items to align and distribute dynamically in a row or column.</p>
+  </div>
+
+  <!-- SECTION 6: GRID -->
+  <!-- Uses grid layout with columns and rows -->
+  <div class="section">
+    <h2>6. display: grid</h2>
+    <div class="grid-container">
+      <div class="grid-item">Grid A</div>
+      <div class="grid-item">Grid B</div>
+      <div class="grid-item">Grid C</div>
+      <div class="grid-item">Grid D</div>
+    </div>
+    <p>Grid lays out items in rows and columns based on grid-template.</p>
+  </div>
+
+</body>
+</html>

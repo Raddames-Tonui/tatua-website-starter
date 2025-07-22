@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Positioning Park</title>
+    <link rel="stylesheet" href="position-style.css" />
+</head>
+<body>
+
+  <!-- Fixed header: always visible -->
+  <h1>🎡 CSS Positioning Park</h1>
+
+  <div class="container">
+
+    <!-- STATIC (default) -->
+    <div class="section">
+      <div class="label">1. Static (default)</div>
+      <div class="static-box">
+        I’m <strong>static</strong>. I follow normal document flow.<br />
+        No special offset, no z-index, no overlap behavior.
+      </div>
+    </div>
+
+    <!-- RELATIVE -->
+    <div class="section">
+      <div class="label">2. Relative</div>
+      <div class="relative-box">
+        I’m <strong>relative</strong> — moved 10px down and 20px right.<br />
+        My original space is still preserved.
+      </div>
+    </div>
+
+    <!-- ABSOLUTE inside RELATIVE -->
+    <div class="section">
+      <div class="label">3. Absolute inside Relative</div>
+      <div class="relative-parent">
+        <strong>Relative Parent:</strong> I’m the container.
+        <div class="absolute-child">
+          Absolute child: I’m positioned 10px from top and 20px from right inside my parent!
+        </div>
+      </div>
+    </div>
+
+    <!-- STICKY on scroll -->
+    <div class="section">
+      <div class="sticky-label">← I stick while scrolling</div>
+      <p style="line-height: 1.8;">
+        Scroll this section and you'll see the green sticky label pin itself 55px from top.
+        <br /><br />
+        <code>position: sticky</code> combines behavior of relative + fixed.
+        It works only inside scrollable parents and needs a <code>top</code> value.
+      </p>
+      <p style="height: 400px;"></p>
+    </div>
+
+    <!-- FIXED Element -->
+    <div class="section">
+      <div class="label">4. Fixed Element</div>
+      <p>
+        See that red box at the bottom-right corner?<br />
+        It’s <strong>fixed</strong> — it stays put even when you scroll the page.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- FIXED box (independent of scroll) -->
+  <div class="fixed-note">
+    🔒 I’m fixed — always visible at bottom-right!
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+/* General styling */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 2rem;
+  background-color: #f4f6f7;
+  color: #2c3e50;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #2980b9;
+}
+
+.section {
+  background: #ffffff;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-left: 5px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,360,0.5);
+}
+
+.box, .ib-box, .inline-box, .flex-item, .grid-item {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 4px;
+}
+
+/* 1. BLOCK elements */
+.block-example .box {
+  display: block; /* Default for divs, takes full width, stacked */
+}
+
+/* 2. INLINE elements */
+.inline-example .inline-box {
+  display: inline; /* Flow inline, width/height ignored */
+  background-color: #27ae60;
+}
+
+/* 3. INLINE-BLOCK elements */
+.inline-block-example .ib-box {
+  display: inline-block; /* Like inline, but allows width/height */
+  width: 120px;
+  height: 50px;
+  background-color: #e67e22;
+}
+
+/* 4. NONE */
+.hidden-box {
+  display: none; /* Completely removed from layout and visibility */
+  background-color: red;
+  padding: 10px;
+}
+
+/* 5. FLEX */
+.flex-container {
+  display: flex; /* Enables flex layout */
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.flex-item {
+  flex: 1; /* Distribute equally */
+  text-align: center;
+}
+
+/* 6. GRID */
+.grid-container {
+  display: grid; /* Enables CSS Grid */
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 10px;
+}
+
+.grid-item {
+  text-align: center;
+}

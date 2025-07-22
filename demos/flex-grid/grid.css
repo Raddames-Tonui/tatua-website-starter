@@ -1,0 +1,98 @@
+/* General page styling */
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  background: #f9f9f9;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  color: #333;
+  margin-top: 40px;
+}
+
+section {
+  margin-bottom: 50px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+
+/* Basic Grid: 3 equal columns */
+/* grid-template-columns
+This property defines the number of columns in your grid and how wide each should be.
+
+repeat(3, 1fr)
+This is a shorthand using the repeat() function to avoid repetition.
+
+3 → means you want 3 columns.
+
+1fr → means each column takes 1 fraction of the available space. 
+fr stands for fractional unit.
+
+It divides the available space in the container after accounting for padding, margin, and gaps.*/
+.grid-basic {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+/* Grid Span Example */
+.grid-span {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.span2 {
+  grid-column: span 2;
+}
+
+
+/* Named Grid Areas Example */
+.grid-areas {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+}
+
+.header {
+  grid-area: header;
+  background: #2980b9;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background: #f39c12;
+  padding: 15px;
+}
+
+.main {
+  grid-area: main;
+  background: #2ecc71;
+  padding: 15px;
+}
+
+.footer {
+  grid-area: footer;
+  background: #34495e;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* Common item style */
+.item {
+  background-color: #3498db;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+}

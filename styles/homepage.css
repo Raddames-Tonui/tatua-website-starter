@@ -1,24 +1,53 @@
 /* ----------------HOME PAGE--------------------------- */
 :root {
-  --primary: #624788;
-  --secondary: #DD9707;
-  --accent: #F0F4FF;
+  /* Primary */
+  --primary-50: #f5ecff;
+  --primary-100: #d8cce9;
+  --primary-200: #bdabd5;
+  --primary-300: #a18ac3;
+  --primary-400: #8668b0;
+  --primary-500: #6d4f97;
+  --primary-600: #553d76;
+  --primary-700: #3c2c56;
+  --primary-800: #251935;
+  --primary-900: #0e0718;
+
+
+    /* accent */
+  --accent-50: #e5ecff;
+  --accent-100: #b6ccfa;
+  --accent-200: #85b1f7;
+  --accent-300: #579cf7;
+  --accent-400: #308df6;
+  --accent-500: #207edd;
+  --accent-600: #186cac;
+  --accent-700: #0f557a;
+  --accent-800: #063849;
+  --accent-900: #00171a;
+/*   --accent: #F0F4FF; */
+
   --background: #F9F9F9;
-  --text: #000000;
+  --text: #0e0d0d;
   --radius: 6px;
 }
 
 .hero {
   min-height: 100vh;
-  display:flex;
+  display: flex;
   flex-direction: column;
-  justify-content:center;
-  background: var(--accent);
+  justify-content: center;
+  background: var(--accent-50);
   text-align: center;
 }
 
+@media screen and (min-width: 769px) {
+  .hero {
+    min-height: 86vh;
+  }
+}
+
 .hero h1 {
-  color: var(--primary);
+  color: var(--primary-500);
   font-size: 2.5rem;
 }
 
@@ -27,8 +56,11 @@
   font-weight: 600;
 }
 
-.hero-buttons{
-  margin: 3rem;
+.hero-buttons {
+  margin: 2rem 1rem; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .hero-buttons .btn {
@@ -37,23 +69,28 @@
   border-radius: var(--radius);
   font-weight: bold;
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .btn.primary {
-  background: var(--primary);
+  background: var(--primary-500);
   color: white;
 }
 
 .btn.secondary {
-  border: 2px solid var(--primary);
-  color: var(--primary);
+  border: 2px solid var(--primary-500);
+  color: var(--primary-500);
   background: transparent;
 }
 
-.services, .stats, .values {
+.services, .stats{
   padding: 3rem 2rem;
   background: white;
-  min-height: 20vh;
+  min-height: 43vh;
 }
 
 .services h2, .stats h2 {
@@ -77,7 +114,7 @@
   justify-content: center;
   padding: 1.5rem;
   height: 20vh;
-  background: var(--accent);
+  background: var(--accent-50);
   border-radius: var(--radius);
   box-shadow: 0 0 6px rgba(0, 0, 0, );
   text-align: center;

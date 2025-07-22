@@ -1,0 +1,22 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "PdfFromTemplate",
+            "request": "launch",
+            "mainClass": "com.pdfgen.PdfFromTemplate",
+            "projectName": "pdf_generator"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "pfg_generator.src.main.java.com.pdfgen.App",
+            "projectName": "tatua-website-starter_44a539ec"
+        }
+    ]
+}

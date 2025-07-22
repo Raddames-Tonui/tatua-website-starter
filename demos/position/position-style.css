@@ -1,0 +1,103 @@
+ body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f0f0;
+      box-sizing: border-box;
+    }
+
+    /* Fixed header: always on top of the page */
+    h1 {
+      margin: 0;
+      height: 50px;
+      text-align: center;
+      padding: 20px;
+      background: #2c3e50;
+      color: white;
+      position: fixed;     /* FIXED - always at top of screen */
+      top: 0;
+      width: 100%;
+      z-index: 50;        /* High stacking to stay above other elements */
+    }
+
+    .container {
+      margin-top: 100px;   /* Make space for fixed header */
+      padding: 2rem;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+    }
+
+    .section {
+      background: white;
+      margin-bottom: 2rem;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: relative; /* Makes it a parent for child absolute positioning */
+    }
+
+    .label {
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: #555;
+    }
+
+    /* 1. STATIC: default position (no offset, no z-index, no layering) */
+    .static-box {
+      background: #ecf6f1;
+      padding: 20px;
+      border: 2px solid #95a5a6;
+      /* No position declared → treated as static by default */
+    }
+
+    /* 2. RELATIVE: moves slightly, keeps original spot in flow */
+    .relative-box {
+      position: relative;
+      top: 50px;   /* Moves down */
+      left: 40px;  /* Moves right */
+      background: #dff9fb;
+      padding: 20px;
+      border: 2px solid #22a6b3;
+    }
+
+    /* 3. ABSOLUTE inside RELATIVE container */
+    .relative-parent {
+      position: relative; /* Needed so absolute child uses this as reference */
+      background: #f9ca24;
+      padding: 60px;
+      height: 200px;
+    }
+
+    .absolute-child {
+      position: absolute;
+      top: 10px;    /* 10px from top of relative parent */
+      right: 20px;  /* 20px from right of relative parent */
+      background: #f0932b;
+      padding: 10px;
+      color: white;
+    }
+
+    /* 4. FIXED note: pinned to bottom-right of screen */
+    .fixed-note {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #eb4d4b;
+      color: white;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      z-index: 1000;
+    }
+
+    /* 5. STICKY: sticks after scroll threshold */
+    .sticky-label {
+      position: sticky;  /* Acts like relative until scroll reaches top: 55px */
+      top: 55px;
+      background: #6ab04c;
+      color: white;
+      padding: 10px;
+      font-weight: bold;
+      z-index: 70;
+    }

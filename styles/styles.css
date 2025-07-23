@@ -52,7 +52,7 @@ html {
 
 header {
   height: 4.5rem; /* 72px if 1rem = 16px */
-  padding: 1rem 2rem;
+  padding: 1rem;
   background-color: var(--accent-50);
   border-bottom: 1px solid #ccc;
   position: fixed;
@@ -60,6 +60,7 @@ header {
   left: 0;
   width: 100%;
   z-index: 100;
+
 }
 
 body {
@@ -118,25 +119,27 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding:0 1.5rem ;
 }
 
 .logo {
   height: 40px;
+  width: auto ;
   flex-shrink: 0;
 }
 
 
 .nav-links {
   list-style: none;
-  display: flex;
-  /* justify-content: space-between; */
+  display: none;
   gap: 1rem;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .nav-links {
-    display: none;
+    display: flex;
   } 
+
 }
 
 .nav-links a {
@@ -246,4 +249,50 @@ blockquote footer {
 
 hr {
     color: #afaeae;
+}
+
+
+
+
+
+
+
+
+
+/* SCROLL BAR */
+
+/* Hide scrollbar but allow scrolling */
+.no-scrollbar::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    display: none;
+  }
+  
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    overflow: auto; /* Ensure scrolling works */
+  }
+  
+
+/* Customize the scrollbar */
+::-webkit-scrollbar {
+  width: 8px;  /* Reduced width of the scrollbar */
+}
+
+/* Style the scrollbar track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Style the scrollbar handle */
+::-webkit-scrollbar-thumb {
+  background: var(--accent-200);
+  border-radius: 10px;
+}
+
+/* Style the scrollbar handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-700);
 }

@@ -56,7 +56,7 @@ main > section {
 
 .header-section, .company-story {
   background-color: var(--accent-50);
-  min-height: 30vh;
+  min-height: 40vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

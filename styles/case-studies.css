@@ -1,15 +1,9 @@
 
 /* Case studies */
 :root {
-  --primary: #624788;
-  --secondary: #DD9707;
-  --accent: #F0F4FF;
-  --background: #F9F9F9;
-  --text: #0e0d0d;
   --radius: 6px;
 
-  :root {
-  /* Primary */
+ /* Primary */
   --primary-50: #f5ecff;
   --primary-100: #d8cce9;
   --primary-200: #bdabd5;
@@ -40,7 +34,6 @@
   --text-50: #4b5563;
   --radius: 6px;
 }
-}
 
 
 
@@ -49,8 +42,18 @@
 } 
 
 section {
-    padding: 2rem;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 2rem ;
 }
+
+[id] {
+  scroll-margin-top:4.9rem; 
+  /*The selector [id] targets any element with an id attribute 
+    This ensures that when the browser scrolls to an anchor, 
+    it leaves room above the element. */
+}
+
 
 /* LAYOUT WRAPPER */
 .layout-wrapper {
@@ -63,19 +66,19 @@ section {
 
 
 .sidebar {
-    background-color: var(--accent-50);
+    background-color: var(--accent-100);
     grid-area: sidebar;
     position: sticky;
     top: 0;
     height: 100vh;
-    padding: 1rem;
+    padding: 2rem 1rem;
     border-right: 1px solid #ccc;
 }
 
 .case-studies-section{
     grid-area: case-studies-section;
     overflow-y: auto;
-    padding-top: 4.8rem;
+    padding-top: 2rem;
 }
 
 /* Responsive layout */
@@ -97,31 +100,28 @@ section {
 
 
 /* Sidebar components */
-
-.sidebar-section {
-    padding-top: 30px;
+.sidebar {
+    padding-top: 4.8rem;
+    color: var(--text-100);
 }
 
 .sidebar-section h3 {
-    color: var(--text-50);
-    margin-top: 2rem;
-    margin-bottom: 1.2rem;
     font-size: 1.1rem;
     text-transform: uppercase;
     letter-spacing: 1px;
+    border-bottom: 1px solid #ccc;
 }
 
- 
 .testimonial-list {
     list-style: none;
 }
- 
+
 .testimonial-list li {
-    margin-bottom: 8px;
-}
+    padding: 0.5rem;
+} 
  
 .testimonial-list a {
-    color: #34495e;
+    color: var(--text-100);
     text-decoration: none;
     padding: 6px 0;
     display: block;
@@ -133,12 +133,44 @@ section {
 }
 
 
-[id] {
-  scroll-margin-top:4.9rem; 
-  /*The selector [id] targets any element with an id attribute 
-    This ensures that when the browser scrolls to an anchor, 
-    it leaves room above the element. */
+.case-studies {
+    text-align: justify;
+    line-height: 1.6;
 }
+
+.info h3 {
+    text-decoration: underline;
+    font-weight: 500;
+    margin-top: 1rem;
+    color: var(--primary-500);
+}
+
+.info strong {
+    font-weight: 500;
+}
+
+/* CASE STUDIES */
+ h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  gap: 1rem; /* spacing between lines and title */
+  margin-top: 3rem;
+}
+
+/* ADDING Lines in title using pseudo elements */
+ h2::before,
+ h2::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid var(--primary-200); /* solid line */
+  height: 0; /* avoid affecting vertical spacing */
+}
+
+
+
+
 
 
 /* TABLES */
@@ -176,16 +208,16 @@ tr:nth-child(even) {
 
 
 /* ROI Section */
-.roi-section {
+.roi-section, .customers-say {
+    min-height: 50vh;
     display: block;
     margin: 0 auto;
+    line-height: 1.8rem;
 }
 
-.roi-section ul {
-
-}
-
-
+/* .roi-section ul {
+    padding-left: 2em;
+} */
 
 
 /* Responsive design */

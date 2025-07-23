@@ -50,7 +50,7 @@ main > section {
 }
 
 .breadcrumb{
-    background-color: var(--accent-50);
+    /* background-color: var(--accent-50); */
 }
 
 
@@ -97,7 +97,7 @@ main > section {
 /*  Company Stats  */
 
 .company-stats {
-  background-color: var(--accent-50);
+  background-color: var(--accent-100);
   min-height: 40vh;
   display: flex;
   flex-direction: column;

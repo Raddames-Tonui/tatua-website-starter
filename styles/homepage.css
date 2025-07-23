@@ -42,7 +42,7 @@
 
 @media screen and (min-width: 769px) {
   .hero {
-    min-height: 86vh;
+    min-height: 90vh;
   }
 }
 
@@ -100,16 +100,20 @@
 }
 
 .service-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  
+  gap: 10px;
   list-style: none;
   padding: 0;
 }
 
 .card {
   display: flex;
+  flex: 1 1 250px;    /* Enables equal width behavior */
   flex-direction: column;
+  min-width: 250px;  /* In small screens*/
+  max-width: 400px;
   align-items: center;
   justify-content: center;
   padding: 1.5rem;

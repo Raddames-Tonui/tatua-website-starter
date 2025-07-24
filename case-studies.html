@@ -10,21 +10,27 @@
   <link rel="stylesheet" href="/styles/case-studies.css">
 </head>
 <body>
-      <!-- Header Navigation -->
-  <header>
+  <div id="zoomWrapper" class="zoomWrapper">
+    <!--  Header Navigation  -->
+    <header>
+      <div class="accessibility-tools">
+        <label for="zoomSlider">Zoom:</label>
+        <input type="range" id="zoomSlider" min="50" max="300" value="100" />
+        <button id="resetZoom" class="resetZoom">Reset</button>
+        <button onclick="toggleTheme()" class="theme-toggle" aria-label="Toggle theme">
+        🌓 Theme
+        </button>
+      </div>
     <nav class="navbar" aria-label="Main navigation">
-      <a href="https://raddames-tonui-portfolio.vercel.app" target="_blank" class="logo-link" aria-label="Tatua Home">
+      <a href="#" target="_blank" class="logo-link" aria-label="Tatua Home">
         <img src="./assets/tatua-logo.png" alt="Tatua logo" class="logo" />
       </a>
       <ul class="nav-links">
-        <li><a href="homepage.html">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html" >Contact</a></li>
         <li><a href="case-studies.html" aria-current="page">Case-Studies</a></li>
         <li><a href="email-templates.html">Templates</a></li>
-        <li><button onclick="toggleTheme()" class="theme-toggle" aria-label="Toggle theme">
-        🌓 Theme
-        </button></li>
       </ul>
     </nav>
   </header>
@@ -34,7 +40,7 @@
           <!-- Breadcrumb Navigation -->
         <nav class="breadcrumb" aria-label="Breadcrumb">
           <ol>
-            <li><a href="homepage.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><span aria-current="page">Case Studies</span></li>
           </ol>
         </nav>

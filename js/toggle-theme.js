@@ -27,14 +27,19 @@ window.addEventListener("DOMContentLoaded", () => {
   document.documentElement.setAttribute("data-theme", theme);
 
 
-/* ZOOM SLIDER */
-  const slider = document.getElementById("zoomSlider");
-  const zoomWrapper = document.getElementById("zoomWrapper");
+/*------------- ZOOM SLIDER ------------ */
+const slider = document.getElementById("zoomSlider");
+const resetBtn = document.getElementById("resetZoom");
 
-  slider.addEventListener("input", (e) => {
-    const zoom = e.target.value / 100;
-    zoomWrapper.style.transform = `scale(${zoom})`;
-    zoomWrapper.style.transformOrigin = "top center";
-  });
+// Zoom with slider
+slider.addEventListener("input", (e) => {
+  const zoom = e.target.value;
+  document.documentElement.style.fontSize = `${zoom}%`;
+});
 
+// Reset zoom
+resetBtn.addEventListener("click", () => {
+  document.documentElement.style.fontSize = "100%";
+  slider.value = 100;
+});
 

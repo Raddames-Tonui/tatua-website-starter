@@ -11,7 +11,7 @@ section {
 }
 
 [id] {
-  scroll-margin-top:4.9rem; 
+  scroll-margin-top: var(--header-height); 
   /*The selector [id] targets any element with an id attribute 
     This ensures that when the browser scrolls to an anchor, 
     it leaves room above the element. */
@@ -64,7 +64,7 @@ section {
 
 /* Sidebar components */
 .sidebar {
-    padding-top: 4.8rem;
+    padding-top:var(--header-height);
     color: var(--text-100);
 }
 

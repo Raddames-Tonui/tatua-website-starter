@@ -27,23 +27,27 @@ html, body {
   }
 }
 
+
 body {
   margin: 0 auto;
   font-family: 'Lexend Deca','Segoe UI', Tahoma,  Verdana, sans-serif;
   background-color: var(--background);
   color: var(--text);
   font-weight: 400;
-  padding-top: 4.5rem; /* Same as header height */
-  min-height: 100vh;
+  min-height: min(100vh, 60rem);
   display: flex;
   flex-direction: column;
+  line-height: 1.4;
 }
 
+.zoomWrapper {
+  transform-origin: top center;
+  transition: transform 0.2s ease-out;
+}
 
 header {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
   background-color: var(--background);
   border-bottom: 1px solid #ccc;
   position: fixed;
@@ -53,18 +57,69 @@ header {
   z-index: 100;
 }
 
+
+main {
+  padding-top: var(--header-height);
+}
+
 .accessibility-tools {
   display: flex;
-  flex-direction: row;
-  justify-content: end;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2px;
+  padding: 0;
+  background-color: var(--primary-800, #555);
+  border-bottom: none;
+  font-size: 15px; 
 }
+
+/* Label styling */
+.accessibility-tools label {
+  font-weight: 500;
+  margin-right: 0.25px;
+  color: white;
+}
+
+/* Range input (Zoom slider) */
+.accessibility-tools input[type="range"] {
+  width: 150px;
+  height: 2px;
+  accent-color: var(--primary-500, #444);
+  cursor: pointer;
+}
+
+/* Buttons */
+.accessibility-tools button {
+  font-size: 16px;
+  padding:  5px;
+  background-color: var(--primary-500, #333);
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.accessibility-tools button:hover {
+  background-color: var(--primary-600, #555);
+}
+
+
+
+/* Theme toggle emoji */
+.theme-toggle {
+  display: flex;
+  border: 1px solid var(--primary-500);
+  align-items: center;
+  gap: 0.5em;
+}
+
 
 .footer {
   text-align: center;
   color: var(--background);
-  font-size: 1rem;
-  background: var(--primary-900);
+  background: var(--primary-800);
   padding:2rem ;
+  font-weight: 400;
 }
 .footer a{
   color: var(--background);
@@ -100,7 +155,7 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding:0 1.5rem ;
+  padding:1.5rem 2rem ;
 }
 
 .logo {
@@ -125,6 +180,7 @@ a:hover {
 .nav-links a {
   color: var(--text-100);
   text-decoration: none;
+  font-size: 1rem;
 }
 
 .nav-links li a[aria-current="page"] {
@@ -132,7 +188,7 @@ a:hover {
     border-bottom: 2px solid var(--primary-500);
 }
 
-/* Header secti0n with bg image */
+/* Header section with bg image */
 .header-section {
   background-image: url('../assets/web.jpg');
   background-size: cover;
@@ -142,7 +198,7 @@ a:hover {
   color: var(--text);
   text-align: center;
   position: relative;
-  min-height: 60vh;
+  min-height: 30rem; /*calc(100vh * 0.5) */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -185,7 +241,8 @@ a:hover {
 .breadcrumb li {
     display: flex;
     align-items: center;
-    font-weight:600;
+    font-weight:500;
+    font-size: 1.175rem;
 }
 
 /* Separator using ::after, except for the last one */
@@ -281,3 +338,4 @@ Prefix	Target Browser(s)
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary-500);
 }
+

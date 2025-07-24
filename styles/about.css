@@ -1,17 +1,18 @@
 /* ---------------ABOUT------------------- */
 
-main > section {
+section {
   padding: 2rem;
 }
 
 
-.header-section, .company-story {
+.company-story {
   background-color: var(--accent-50);
   min-height: 40vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  padding: 2rem;
 }
 
 

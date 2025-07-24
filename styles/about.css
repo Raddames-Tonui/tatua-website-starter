@@ -47,57 +47,59 @@ section {
 }
 
 /*  Company Stats  */
-.company-stats {
-  margin: 2rem;
-  padding: 2rem;
-  border-radius: 1rem;
+.stats {
+  padding: 3rem 2rem;
   background-color: var(--primary-800);
   color: white;
+  border-radius: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  margin: 0  2rem 2rem 2rem;
 }
 
-.company-stats h2 {
+.stats h2 {
   color: white;
   font-size: 2rem;
   font-weight: 600;
   text-align: center;
 }
 
-.company-stats ul {
+.stats-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 2rem;
   list-style: none;
-  width: 100%;
   padding: 0;
   margin: 0;
+  width: 100%;
 }
 
-.company-stats li {
-  text-align: center;
-  padding: 1rem;
+.stats li {
+  background-color: var(--primary-700);
+  padding: 1.5rem;
   border-radius: 0.75rem;
+  text-align: center;
   transition: transform 0.3s ease;
 }
 
-.company-stats li:hover {
+.stats li:hover {
   transform: translateY(-5px);
 }
 
 .label {
-  font-weight: 400;
   font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
 }
 
 .value {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 600;
-  margin-top: 0.25rem;
   color: white;
 }
+
 
 
 /* Company Values */

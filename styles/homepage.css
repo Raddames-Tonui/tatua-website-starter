@@ -65,63 +65,75 @@
   border: 2px solid var(--primary-500);
   color: var(--primary-500);
 }
-
-
-.services{
-  padding: 3rem 2rem;
-  min-height: 50vh;
+/* SERVICES SECTION */
+.services {
+  padding: 5rem 2rem;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
 }
 
-
-.services h2, .stats h2 {
-    text-align: center;
-    color: var(--primary-500);
-    margin-bottom:1.2rem ;
+.services h2 {
+  text-align: center;
+  color: var(--primary-500);
+  font-size: 2rem;
+  font-weight: 600;
 }
-
 
 .service-cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;  
-  gap: 10px;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .service-card {
-  flex: 1 1 300px;        /* Grow, shrink, 300px base */
-  min-width: 300px;  /* In small screens*/
-  max-width: 350px;       /* Prevent cards from getting too wide */
+  flex: 1 1 280px;
+  max-width: 350px;
   padding: 2rem;
   background: var(--accent-50);
-  border-radius: var(--radius);
+  border-radius: var(--radius, 1rem);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-
-    /* Card internal layout with Flexbox */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 80px;
+  min-height: 180px;
 }
 
 .service-card:hover {
   transform: translateY(-5px);
-  border: 1px solid var(--primary-100);
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--primary-100);
 }
 
+.service-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-700);
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: var(--text);
+}
+
+/* STATS SECTION */
 .stats {
-  margin: 2rem;
-  padding: 2rem;
-  border-radius: 1rem;
+  padding: 3rem 2rem;
   background-color: var(--primary-800);
   color: white;
+  border-radius: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
+  margin: 0  2rem 2rem 2rem;
 }
 
 .stats h2 {
@@ -131,19 +143,21 @@
   text-align: center;
 }
 
-.stats ul {
+.stats-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 2rem;
   list-style: none;
-  width: 100%;
   padding: 0;
   margin: 0;
+  width: 100%;
 }
 
 .stats li {
-  text-align: center;
+  background-color: var(--primary-700);
+  padding: 1.5rem;
   border-radius: 0.75rem;
+  text-align: center;
   transition: transform 0.3s ease;
 }
 
@@ -152,14 +166,13 @@
 }
 
 .label {
-  font-weight: 400;
   font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
 }
 
 .value {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 600;
-  margin-top: 0.25rem;
   color: white;
 }
-

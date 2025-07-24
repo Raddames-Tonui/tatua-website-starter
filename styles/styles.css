@@ -173,10 +173,11 @@ a:hover {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(220, 220, 220, 0.8);
   z-index: 0;
 }
 
+/* To style for the wordings */
 .header-section > * {
   position: relative;
   z-index: 1;
@@ -184,7 +185,6 @@ a:hover {
 
 .header-section p {
   font-size: 1.2rem;
-
 }
 
 /* Bread crumb */
@@ -254,11 +254,6 @@ hr {
 
 
 
-
-
-
-
-
 /* SCROLL BAR */
 
 /* Hide scrollbar but allow scrolling */
@@ -288,7 +283,7 @@ hr {
 
 /* Style the scrollbar handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--accent-200);
+  background: var(--text-50);
   border-radius: 10px;
 }
 

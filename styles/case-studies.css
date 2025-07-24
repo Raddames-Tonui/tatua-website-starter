@@ -43,7 +43,6 @@
 
 section {
     margin: 0 auto;
-    width: 100%;
     padding: 0 2rem ;
 }
 
@@ -159,6 +158,11 @@ section {
   margin-top: 3rem;
 }
 
+.Company-Information h3 {
+    text-align: center;
+    font-size: 1.4rem;
+}
+
 /* ADDING Lines in title using pseudo elements */
  h2::before,
  h2::after {
@@ -167,8 +171,6 @@ section {
   border-bottom: 1px solid var(--primary-200); /* solid line */
   height: 0; /* avoid affecting vertical spacing */
 }
-
-
 
 
 
@@ -209,15 +211,15 @@ tr:nth-child(even) {
 
 /* ROI Section */
 .roi-section, .customers-say {
-    min-height: 50vh;
+    min-height: 40vh;
     display: block;
     margin: 0 auto;
-    line-height: 1.8rem;
+    line-height: 2rem;
 }
 
-/* .roi-section ul {
+.roi-section ul {
     padding-left: 2em;
-} */
+}
 
 
 /* Responsive design */

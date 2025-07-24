@@ -96,7 +96,7 @@
 
 .services, .stats{
   padding: 3rem 2rem;
-  background: white;
+  background-color: white;
   min-height: 43vh;
 }
 

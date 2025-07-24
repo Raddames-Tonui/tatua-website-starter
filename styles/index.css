@@ -1,35 +1,4 @@
-:root {
-  /* Primary */
-  --primary-50: #f5ecff;
-  --primary-100: #d8cce9;
-  --primary-200: #bdabd5;
-  --primary-300: #a18ac3;
-  --primary-400: #8668b0;
-  --primary-500: #6d4f97;
-  --primary-600: #553d76;
-  --primary-700: #3c2c56;
-  --primary-800: #251935;
-  --primary-900: #0e0718;
-
-    /* accent */
-  --accent-50: #e5ecff;
-  --accent-100: #b6ccfa;
-  --accent-200: #85b1f7;
-  --accent-300: #579cf7;
-  --accent-400: #308df6;
-  --accent-500: #207edd;
-  --accent-600: #186cac;
-  --accent-700: #0f557a;
-  --accent-800: #063849;
-  --accent-900: #00171a;
-/*   --accent: #F0F4FF; */
-
-   --background: #f9fafb; 
-  --text-100: #1f2937;
-  --text-50: #4b5563;
-  --radius: 6px;
-}
-
+@import url(./variables.css);
 
 @font-face {
   font-family: 'Lexend Deca';
@@ -38,55 +7,122 @@
   font-style: normal;
 }
 
-
+/* Global Reset */
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-html {
+html, body {
   scroll-behavior: smooth;
-  font-size: 16px; 
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+    transition: none !important;
+  }
+}
+
+
+body {
+  margin: 0 auto;
+  font-family: 'Lexend Deca','Segoe UI', Tahoma,  Verdana, sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  font-weight: 400;
+  min-height: min(100vh, 60rem);
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4;
+}
+
+.zoomWrapper {
+  transform-origin: top center;
+  transition: transform 0.2s ease-out;
 }
 
 header {
-  height: 4.5rem; /* 72px if 1rem = 16px */
-  padding: 1rem;
-  background-color: var(--accent-50);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background);
   border-bottom: 1px solid #ccc;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 100;
-
 }
 
-body {
-  margin: 0 auto;
-  font-family: 'Lexend Deca','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--background);
-  color: var(--text);
-  font-weight: 400;
-  padding-top: 4.5rem; /* Same as header height */
-  min-height: 100vh;
+
+main {
+  padding-top: var(--header-height);
+}
+
+.accessibility-tools {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2px;
+  padding: 0;
+  background-color: var(--primary-800, #555);
+  border-bottom: none;
+  font-size: 15px; 
+}
+
+/* Label styling */
+.accessibility-tools label {
+  font-weight: 500;
+  margin-right: 0.25px;
+  color: white;
+}
+
+/* Range input (Zoom slider) */
+.accessibility-tools input[type="range"] {
+  width: 150px;
+  height: 2px;
+  accent-color: var(--primary-500, #444);
+  cursor: pointer;
+}
+
+/* Buttons */
+.accessibility-tools button {
+  font-size: 16px;
+  padding:  5px;
+  background-color: var(--primary-500, #333);
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.accessibility-tools button:hover {
+  background-color: var(--primary-600, #555);
 }
 
 
 
-body > footer {
+/* Theme toggle emoji */
+.theme-toggle {
+  display: flex;
+  border: 1px solid var(--primary-500);
+  align-items: center;
+  gap: 0.5em;
+}
+
+
+.footer {
   text-align: center;
   color: var(--background);
-  font-size: 1rem;
-  background: var(--accent-800);
+  background: var(--primary-800);
   padding:2rem ;
+  font-weight: 400;
 }
-
-body > footer a{
-  color: #F0F4FF;
+.footer a{
+  color: var(--background);
 }
 
 
@@ -119,7 +155,7 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding:0 1.5rem ;
+  padding:1.5rem 2rem ;
 }
 
 .logo {
@@ -127,7 +163,6 @@ a:hover {
   width: auto ;
   flex-shrink: 0;
 }
-
 
 .nav-links {
   list-style: none;
@@ -145,7 +180,7 @@ a:hover {
 .nav-links a {
   color: var(--text-100);
   text-decoration: none;
-  font-weight: 500;
+  font-size: 1rem;
 }
 
 .nav-links li a[aria-current="page"] {
@@ -153,7 +188,7 @@ a:hover {
     border-bottom: 2px solid var(--primary-500);
 }
 
-/* Header sectin */
+/* Header section with bg image */
 .header-section {
   background-image: url('../assets/web.jpg');
   background-size: cover;
@@ -163,7 +198,7 @@ a:hover {
   color: var(--text);
   text-align: center;
   position: relative;
-  min-height: 60vh;
+  min-height: 30rem; /*calc(100vh * 0.5) */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -173,7 +208,7 @@ a:hover {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(220, 220, 220, 0.8);
+  background-color: var(--image-background); 
   z-index: 0;
 }
 
@@ -206,7 +241,8 @@ a:hover {
 .breadcrumb li {
     display: flex;
     align-items: center;
-    font-weight:600;
+    font-weight:500;
+    font-size: 1.175rem;
 }
 
 /* Separator using ::after, except for the last one */
@@ -255,7 +291,18 @@ hr {
 
 
 /* SCROLL BAR */
+/* Pseudo elements */
+/* Vendor Prefixes
 
+They are browser-specific extensions to CSS, used when a feature isn’t fully standardized across all browsers.
+
+Prefix	Target Browser(s)
+-webkit-	Chrome, Safari, newer Edge
+-moz-	Firefox
+-ms-	Internet Explorer, old Edge
+-o-	Opera (obsolete now)
+
+*/
 /* Hide scrollbar but allow scrolling */
 .no-scrollbar::-webkit-scrollbar {
     width: 0px;
@@ -277,17 +324,18 @@ hr {
 
 /* Style the scrollbar track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #f1f1f2;
   border-radius: 10px;
 }
 
 /* Style the scrollbar handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--text-50);
+  background: #ccc;
   border-radius: 10px;
 }
 
 /* Style the scrollbar handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-700);
+  background: var(--primary-500);
 }
+

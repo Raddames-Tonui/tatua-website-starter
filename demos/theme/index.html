@@ -1,36 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tatua - Enterprise Ticketing Solutions</title>
-  <meta name="description" content="Streamline your support operations with Tatua's enterprise-grade ticketing system. Join 500+ companies delivering exceptional customer experiences." />
-  <link rel="icon" type="image/x-icon" href="/assets/tatua-favicon.png" />
-  <link rel="stylesheet" href="styles/styles.css" />
-  <link rel="stylesheet" href="styles/homepage.css">
+  <meta name="description" content="Streamline your support operations with Tatua's enterprise-grade ticketing system." />
+  <link rel="icon" href="../../assets/tatua-logo.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    const setTheme = (theme) => {
+      document.documentElement.setAttribute("data-theme", theme);
+      localStorage.setItem("theme", theme);
+    };
+
+    const toggleTheme = () => {
+      const current = document.documentElement.getAttribute("data-theme");
+      setTheme(current === "dark" ? "light" : "dark");
+    };
+
+    window.addEventListener("DOMContentLoaded", () => {
+      const savedTheme = localStorage.getItem("theme");
+      const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      setTheme(savedTheme || (systemPrefersDark ? "dark" : "light"));
+    });
+  </script>
 </head>
 <body>
-
-  <!--  Header Navigation  -->
   <header>
+    <button onclick="toggleTheme()" class="theme-toggle" aria-label="Toggle theme">🌓 Theme</button>
     <nav class="navbar" aria-label="Main navigation">
       <a href="homepage.html" class="logo-link" aria-label="Tatua Home">
         <img src="./assets/tatua-logo.png" alt="Tatua logo" class="logo" />
       </a>
       <ul class="nav-links">
         <li><a href="homepage.html" aria-current="page">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="case-studies.html">Case Studies</a></li>
-        <li><a href="email-templates.html">Templates</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Case Studies</a></li>
+        <li><a href="#">Templates</a></li>
       </ul>
     </nav>
   </header>
 
-  <!--  Main Content  -->
   <main>
-
-    <!--  Hero Section  -->
     <section class="hero" aria-labelledby="hero-title">
       <h1 id="hero-title">Streamline Your Support Operations</h1>
       <p class="tagline">Enterprise-grade ticketing system that scales with your business</p>
@@ -41,56 +53,39 @@
       </div>
     </section>
 
-    <!--  Services Section  -->
     <section class="services" aria-labelledby="services-title">
       <h2 id="services-title">Why Choose Tatua?</h2>
-      <div  class="service-cards">
-        <div  class="service-card">
+      <div class="service-cards">
+        <div class="service-card">
           <h3>Lightning Fast Resolution</h3>
           <p>Average ticket resolution time reduced by 60%</p>
         </div>
-        <div  class="service-card">
+        <div class="service-card">
           <h3>Enterprise Security</h3>
           <p>SOC 2 compliant with end-to-end encryption</p>
-        </div >
-        <div  class="service-card">
+        </div>
+        <div class="service-card">
           <h3>Seamless Integration</h3>
           <p>Connects with Slack, Teams, and 200+ business tools</p>
-        </div >
+        </div>
       </div>
     </section>
 
-    <!--  Stats Section  -->
     <section class="stats" aria-labelledby="stats-title">
       <h2 id="stats-title">By the Numbers</h2>
       <dl class="stats-list">
-        <div>
-          <dt>  Satisfied customers</dt>
-          <dd>500+</dd>
-        </div>
-        <div>
-          <dt>Tickets Processed</dt>
-          <dd>2M+</dd>
-        </div>
-        <div>
-          <dt>Faster Resolution</dt>
-          <dd>60%</dd>
-        </div>
-        <div>
-          <dt>Uptime Guarantee</dt>
-          <dd>99.9%</dd>
-        </div>
+        <div><dt>Satisfied customers</dt><dd>500+</dd></div>
+        <div><dt>Tickets Processed</dt><dd>2M+</dd></div>
+        <div><dt>Faster Resolution</dt><dd>60%</dd></div>
+        <div><dt>Uptime Guarantee</dt><dd>99.9%</dd></div>
       </dl>
     </section>
-
   </main>
 
-  <!--  Footer  -->
   <footer>
     <p>&copy; 2025 Tatua Solutions Inc.</p>
     <p>Email: <a href="mailto:hello@tatua.com">hello@tatua.com</a> | Phone: <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
     <p>123 Innovation Drive, Suite 400, San Francisco, CA 94105</p>
   </footer>
-
 </body>
 </html>

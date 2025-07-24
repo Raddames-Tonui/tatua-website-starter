@@ -5,23 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us - Tatua Solutions</title>
   <meta name="description" content="Get in touch with Tatua's team. Start your free trial or schedule a demo to see how we can transform your support operations." />
-  <link rel="stylesheet" href="/styles/styles.css" />
+  <link rel="stylesheet" href="/styles/index.css" />
   <link rel="stylesheet" href="/styles/contact.css">
   <link rel="icon" type="image/x-icon" href="/assets/tatua-favicon.png" />
 </head>
 <body>
-  <!-- Header Navigation -->
-  <header>
+  <div id="zoomWrapper" class="zoomWrapper">
+    <!--  Header Navigation  -->
+    <header>
+      <div class="accessibility-tools">
+        <label for="zoomSlider">Zoom:</label>
+        <input type="range" id="zoomSlider" min="50" max="300" value="100" />
+        <button id="resetZoom">Reset</button>
+        <button onclick="toggleTheme()" class="theme-toggle" aria-label="Toggle theme">
+        🌓 Theme
+        </button>
+      </div>
     <nav class="navbar" aria-label="Main navigation">
-      <a href="homepage.html" class="logo-link" aria-label="Tatua Home">
+      <a href="#" target="_blank" class="logo-link" aria-label="Tatua Home">
         <img src="./assets/tatua-logo.png" alt="Tatua logo" class="logo" />
       </a>
       <ul class="nav-links">
-        <li><a href="homepage.html">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html" aria-current="page">Contact</a></li>
         <li><a href="case-studies.html">Case Studies</a></li>
         <li><a href="email-templates.html">Templates</a></li>
+        </li>
       </ul>
     </nav>
   </header>
@@ -33,7 +43,7 @@
        <!-- Breadcrumb Navigation -->
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <ol>
-        <li><a href="homepage.html">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><span aria-current="page">Contact</span></li>
       </ol>
     </nav>
@@ -87,9 +97,9 @@
 
   <div class="layout-wrapper">
     <!-- Contact Form -->
-    <section class="form-heading" aria-labelledby="form-heading">
+    <section class="form-section" aria-labelledby="form-heading">
       <h2 id="form-heading">Send Us a Message</h2>
-      <form action="/submit-contact" method="POST" novalidate>
+      <form action="#" method="POST" novalidate>
         <!-- Personal Information -->
         <fieldset>
           <legend>Contact Information</legend>
@@ -240,11 +250,13 @@
     </section>
   </main>
 
-  <!--  Footer  -->
-  <footer>
-    <p>&copy; 2025 Tatua Solutions Inc.</p>
-    <p>Email: <a href="mailto:hello@tatua.com">hello@tatua.com</a> | Phone: <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
-    <p>123 Innovation Drive, Suite 400, San Francisco, CA 94105</p>
-  </footer>
+        <!--  Footer  -->
+    <footer class="footer">
+      <p>&copy; 2025 Tatua Solutions Inc.</p>
+      <p>Email: <a href="mailto:#">hello@tatua.com</a> | Phone: <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+      <p>123 Innovation Drive, Suite 400, San Francisco, CA 94105</p>
+    </footer>
+  
+    <script src="./js/toggle-theme.js"></script>
 </body>
 </html>

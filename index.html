@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tatua - Enterprise Ticketing Solutions</title>
+  <meta name="description" content="Streamline your support operations with Tatua's enterprise-grade ticketing system. Join 500+ companies delivering exceptional customer experiences." />
+  <link rel="icon" type="image/x-icon" href="/assets/tatua-favicon.png" />
+  <link rel="stylesheet" href="styles/index.css" />
+  <link rel="stylesheet" href="styles/homepage.css">
+</head>
+<body>
+
+  <div id="zoomWrapper" class="zoomWrapper">
+    <!--  Header Navigation  -->
+    <header>
+      <div class="accessibility-tools">
+        <label for="zoomSlider">Zoom:</label>
+        <input type="range" id="zoomSlider" min="50" max="300" value="100" />
+        <button id="resetZoom">Reset</button>
+        <button onclick="toggleTheme()" class="theme-toggle" aria-label="Toggle theme">
+        🌓 Theme
+        </button>
+      </div>
+      <nav class="navbar" aria-label="Main navigation">
+        <a href="#" target="_blank" class="logo-link" aria-label="Tatua Home">
+          <img src="./assets/tatua-logo.png" alt="Tatua logo" class="logo" />
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="case-studies.html">Case Studies</a></li>
+          <li><a href="email-templates.html">Templates</a></li>
+        </ul>      
+      </nav>
+    </header>
+
+  <!--  Main Content  -->
+  <main>
+
+    <!--  Hero Section  -->
+    <section class="hero" aria-labelledby="hero-title">
+      <h1 id="hero-title">Streamline Your Support Operations</h1>
+      <p class="tagline">Enterprise-grade ticketing system that scales with your business</p>
+      <p class="description">Join 500+ companies using Tatua to manage customer support, track issues, and deliver exceptional service experiences.</p>
+      <div class="hero-buttons">
+        <a href="#" class="btn primary">Start Free Trial</a>
+        <a href="#" class="btn secondary">Schedule Demo</a>
+      </div>
+    </section>
+
+    <!--  Services Section  -->
+    <section class="services" aria-labelledby="services-title">
+      <h2 id="services-title">Why Choose Tatua?</h2>
+      <div  class="service-cards">
+        <div  class="service-card">
+          <h3>Lightning Fast Resolution</h3>
+          <p>Average ticket resolution time reduced by 60%</p>
+        </div>
+        <div  class="service-card">
+          <h3>Enterprise Security</h3>
+          <p>SOC 2 compliant with end-to-end encryption</p>
+        </div >
+        <div  class="service-card">
+          <h3>Seamless Integration</h3>
+          <p>Connects with Slack, Teams, and 200+ business tools</p>
+        </div >
+      </div>
+    </section>
+
+    <!--  Stats Section  -->
+    <section class="stats" aria-labelledby="stats-title">
+      <h2 id="stats-title">By the Numbers</h2>
+      <ul class="stats-list">
+        <li>
+          <div class="label">  Satisfied customers</div>
+          <div class="value">500+</div class="value">
+        </li>
+        <li>
+          <div class="label">Tickets Processed</div>
+          <div class="value">2M+</div class="value">
+        </li>
+        <li>
+          <div class="label">Faster Resolution</div>
+          <div class="value">60%</div class="value">
+        </li>
+        <li>
+          <div class="label">Uptime Guarantee</div>
+          <div class="value">99.9%</div class="value">
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+        <!--  Footer  -->
+    <footer class="footer">
+      <p>&copy; 2025 Tatua Solutions Inc.</p>
+      <p>Email: <a href="mailto:#">hello@tatua.com</a> | Phone: <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+      <p>123 Innovation Drive, Suite 400, San Francisco, CA 94105</p>
+    </footer>
+
+  </div>
+
+  <script src="./js/toggle-theme.js"></script>
+</body>
+</html>

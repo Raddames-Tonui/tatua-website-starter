@@ -42,7 +42,7 @@
 
 @media screen and (min-width: 769px) {
   .hero {
-    min-height: 86vh;
+    min-height: 90vh;
   }
 }
 
@@ -74,6 +74,13 @@
   justify-content: center;
   text-align: center;
   white-space: nowrap;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-buttons .btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .btn.primary {
@@ -89,7 +96,7 @@
 
 .services, .stats{
   padding: 3rem 2rem;
-  background: white;
+  background-color: white;
   min-height: 43vh;
 }
 
@@ -100,24 +107,38 @@
 }
 
 .service-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 2rem;
-  list-style: none;
-  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  
+  gap: 10px;
 }
 
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem;
-  height: 20vh;
+.service-card {
+  flex: 1 1 300px;        /* Grow, shrink, 300px base */
+  min-width: 300px;  /* In small screens*/
+  max-width: 350px;       /* Prevent cards from getting too wide */
+  padding: 30px 24px;
   background: var(--accent-50);
   border-radius: var(--radius);
-  box-shadow: 0 0 6px rgba(0, 0, 0, );
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+
+    /* Card internal layout with Flexbox */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80px;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  border-top: 0;
+  border-right: 1px solid var(--accent-100);
+  border-bottom: 1px solid var(--accent-100);
+  border-left: 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .stats-list {

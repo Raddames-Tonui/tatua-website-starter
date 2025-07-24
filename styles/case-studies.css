@@ -1,15 +1,9 @@
 
 /* Case studies */
 :root {
-  --primary: #624788;
-  --secondary: #DD9707;
-  --accent: #F0F4FF;
-  --background: #F9F9F9;
-  --text: #0e0d0d;
   --radius: 6px;
 
-  :root {
-  /* Primary */
+ /* Primary */
   --primary-50: #f5ecff;
   --primary-100: #d8cce9;
   --primary-200: #bdabd5;
@@ -21,16 +15,6 @@
   --primary-800: #251935;
   --primary-900: #0e0718;
 
-  --secondary-50: #fff6db;
-  --secondary-100: #ffe5af;
-  --secondary-200: #fcd480;
-  --secondary-300: #fac350;
-  --secondary-400: #f8b121;
-  --secondary-500: #de9807;
-  --secondary-600: #ad7601;
-  --secondary-700: #7d5400;
-  --secondary-800: #4b3300;
-  --secondary-900: #1d1000;
 
     /* accent */
   --accent-50: #e5ecff;
@@ -51,85 +35,92 @@
   --radius: 6px;
 }
 
-}
 
-body{
-  background-color: var(--accent);
-}
-
-.mobile-breadcrumb {
-    display: none;
-}
-
-@media  (max-width: 768px) {
-    .mobile-breadcrumb {
-        display: block;
-    }   
-}
-
-.header-section{
-    display: flex;
-    flex-direction: column;
-    text-align: start;
-}
 
 .header-section h2{
     color: var(--text);
-}
-
-hr{
-    color: #afaeae;
-}
+} 
 
 section {
-    padding: 2rem;
+    margin: 0 auto;
+    padding: 0 2rem ;
 }
+
+[id] {
+  scroll-margin-top:4.9rem; 
+  /*The selector [id] targets any element with an id attribute 
+    This ensures that when the browser scrolls to an anchor, 
+    it leaves room above the element. */
+}
+
 
 /* LAYOUT WRAPPER */
 .layout-wrapper {
     display: grid;
-    grid-template-areas:
-        
-        "sidebar main"
-    ;
-    grid-template-columns: 1fr 3fr;
-    gap: 10px;
-    /* min-height: calc(100vh - 14rem); */
+    grid-template-columns: 250px 1fr;
+    grid-template-areas: "sidebar case-studies-section";
+    min-height: 86vh;
+    border: 1px solid #ccc;
 }
+
 
 .sidebar {
+    background-color: var(--accent-100);
+    grid-area: sidebar;
     position: sticky;
     top: 0;
-    left: 0;
-    /* width: 300px; */
-    padding: 30px 20px;
-    border-right: 1px solid var(--accent-700);
+    height: 100vh;
+    padding: 2rem 1rem;
+    border-right: 1px solid #ccc;
 }
 
+.case-studies-section{
+    grid-area: case-studies-section;
+    overflow-y: auto;
+    padding-top: 2rem;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .layout-wrapper {
+        grid-template-areas: 
+            "case-studies-section"
+            "sidebar";
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar{
+        position: static;
+        height: auto;
+        border-right: none;
+        border-top: 1px solid #ccc;        
+    }
+}
+
+
 /* Sidebar components */
-.sidebar-section {
-    margin-bottom: 30px;
+.sidebar {
+    padding-top: 4.8rem;
+    color: var(--text-100);
 }
 
 .sidebar-section h3 {
-    color: var(--text-50);
-    margin-bottom: 15px;
-    font-size: 1.1em;
+    font-size: 1.1rem;
     text-transform: uppercase;
     letter-spacing: 1px;
+    border-bottom: 1px solid #ccc;
 }
 
- 
 .testimonial-list {
     list-style: none;
 }
- 
+
 .testimonial-list li {
-    margin-bottom: 8px;
-}
+    padding: 0.5rem;
+} 
  
 .testimonial-list a {
-    color: #34495e;
+    color: var(--text-100);
     text-decoration: none;
     padding: 6px 0;
     display: block;
@@ -138,6 +129,47 @@ section {
  
 .testimonial-list a:hover {
     color: var(--primary-500);
+}
+
+
+.case-studies {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.info h3 {
+    text-decoration: underline;
+    font-weight: 500;
+    margin-top: 1rem;
+    color: var(--primary-500);
+}
+
+.info strong {
+    font-weight: 500;
+}
+
+/* CASE STUDIES */
+ h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  gap: 1rem; /* spacing between lines and title */
+  margin-top: 3rem;
+}
+
+.Company-Information h3 {
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+/* ADDING Lines in title using pseudo elements */
+ h2::before,
+ h2::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid var(--primary-200); /* solid line */
+  height: 0; /* avoid affecting vertical spacing */
 }
 
 
@@ -178,16 +210,16 @@ tr:nth-child(even) {
 
 
 /* ROI Section */
-.roi-section {
+.roi-section, .customers-say {
+    min-height: 40vh;
     display: block;
     margin: 0 auto;
+    line-height: 2rem;
 }
 
 .roi-section ul {
-
+    padding-left: 2em;
 }
-
-
 
 
 /* Responsive design */
@@ -206,7 +238,7 @@ tr:nth-child(even) {
     .layout-wrapper {
         display: grid;
         grid-template-areas: 
-            "main"
+            "case-studies-section"
             "sidebar";
     }
     

@@ -24,10 +24,12 @@
   --accent-900: #00171a;
 /*   --accent: #F0F4FF; */
 
-  --background: #F9F9F9;
-  --text: #0e0d0d;
+   --background: #f9fafb; 
+  --text-100: #1f2937;
+  --text-50: #4b5563;
   --radius: 6px;
 }
+
 
 @font-face {
   font-family: 'Lexend Deca';
@@ -43,17 +45,22 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  font-size: 16px; 
+}
+
 header {
-  height: 4.5rem; /* ~72px if 1rem = 16px */
-  padding: 1rem 2rem;
+  height: 4.5rem; /* 72px if 1rem = 16px */
+  padding: 1rem;
   background-color: var(--accent-50);
   border-bottom: 1px solid #ccc;
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
   width: 100%;
   z-index: 100;
+
 }
 
 body {
@@ -61,7 +68,6 @@ body {
   font-family: 'Lexend Deca','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--background);
   color: var(--text);
-  line-height: 1.6;  
   font-weight: 400;
   padding-top: 4.5rem; /* Same as header height */
   min-height: 100vh;
@@ -69,16 +75,13 @@ body {
   flex-direction: column;
 }
 
-html {
-  scroll-behavior: smooth;
-}
 
 
 body > footer {
   text-align: center;
-  color: white;
+  color: var(--background);
   font-size: 1rem;
-  background: var(--primary-700);
+  background: var(--accent-800);
   padding:2rem ;
 }
 
@@ -86,10 +89,25 @@ body > footer a{
   color: #F0F4FF;
 }
 
+
 h1, h2{
     color: var(--primary-500);
     text-align: center;
     line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+p {
+  line-height: 1.6;
+}
+
+
+a {
+  text-decoration: none;
+  color: var(--primary-500);
 }
 
 a:hover {
@@ -101,36 +119,81 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding:0 1.5rem ;
 }
 
 .logo {
   height: 40px;
+  width: auto ;
+  flex-shrink: 0;
 }
 
 
 .nav-links {
   list-style: none;
-  display: flex;
+  display: none;
   gap: 1rem;
 }
 
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex;
+  } 
+
+}
+
 .nav-links a {
-  color: var(--primary-500);
+  color: var(--text-100);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .nav-links li a[aria-current="page"] {
-    color: var(--primary-600);
-    border-bottom: 2px solid #624788;
+    color: var(--primary-500);
+    border-bottom: 2px solid var(--primary-500);
 }
 
+/* Header sectin */
+.header-section {
+  background-image: url('../assets/web.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 4rem 2rem;
+  color: var(--text);
+  text-align: center;
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(220, 220, 220, 0.8);
+  z-index: 0;
+}
+
+/* To style for the wordings */
+.header-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+.header-section p {
+  font-size: 1.2rem;
+}
 
 /* Bread crumb */
 .breadcrumb{
-    font-size: 0.9rem;
-    color: var(--primary-500);
-    padding-left: 2rem;
+  position: absolute;
+  top: 0;
+  font-size: 0.9rem;
+  color: var(--primary-500);
+  padding-left: 1rem 2rem;
 }
 
 .breadcrumb ol {
@@ -181,4 +244,50 @@ blockquote{
 
 blockquote footer {
     font-weight: normal;
+}
+
+
+hr {
+    color: #afaeae;
+}
+
+
+
+
+/* SCROLL BAR */
+
+/* Hide scrollbar but allow scrolling */
+.no-scrollbar::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    display: none;
+  }
+  
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    overflow: auto; /* Ensure scrolling works */
+  }
+  
+
+/* Customize the scrollbar */
+::-webkit-scrollbar {
+  width: 8px;  /* Reduced width of the scrollbar */
+}
+
+/* Style the scrollbar track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Style the scrollbar handle */
+::-webkit-scrollbar-thumb {
+  background: var(--text-50);
+  border-radius: 10px;
+}
+
+/* Style the scrollbar handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-700);
 }

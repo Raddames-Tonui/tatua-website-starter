@@ -1,0 +1,377 @@
+/* Global reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+ 
+/* Container utility */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+ 
+/* Button components using Flexbox */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+ 
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+    border-color: #3498db;
+}
+ 
+.btn-primary:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+}
+ 
+.btn-outline {
+    background-color: transparent;
+    color: #3498db;
+    border-color: #3498db;
+}
+ 
+.btn-outline:hover {
+    background-color: #3498db;
+    color: white;
+}
+ 
+.btn-large {
+    padding: 14px 28px;
+    font-size: 16px;
+}
+ 
+/* Navigation bar - Complex Flexbox layout */
+.header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+ 
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+ 
+/* Brand section with Flexbox */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;         /* Brand never shrinks */
+}
+ 
+.logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+}
+ 
+.brand-name {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #2c3e50;
+}
+ 
+/* Navigation links */
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+    flex-shrink: 1;         /* Can shrink on smaller screens */
+}
+ 
+.nav-link {
+    color: #555;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+ 
+.nav-link:hover {
+    color: #3498db;
+}
+ 
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #3498db;
+    transition: width 0.3s ease;
+}
+ 
+.nav-link:hover::after {
+    width: 100%;
+}
+ 
+/* Action buttons */
+.navbar-actions {
+    display: flex;
+    gap: 12px;
+    flex-shrink: 0;         /* Actions never shrink */
+}
+ 
+/* Mobile menu button */
+.mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 24px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+ 
+.mobile-menu-btn span {
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    transition: 0.3s;
+}
+ 
+/* Hero section with perfect centering */
+.hero-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+ 
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+ 
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 32px;
+    opacity: 0.9;
+    max-width: 600px;
+}
+ 
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+ 
+/* Features section */
+.features-section {
+    padding: 80px 0;
+    background-color: white;
+}
+ 
+.features-section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 60px;
+    color: #2c3e50;
+}
+ 
+/* Card grid using Flexbox */
+.features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+ 
+.feature-card {
+    flex: 1 1 300px;        /* Grow, shrink, 300px base */
+    max-width: 350px;       /* Prevent cards from getting too wide */
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    padding: 30px 24px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    /* Card internal layout with Flexbox */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 280px;
+}
+ 
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+ 
+.feature-card.featured {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    transform: scale(1.05);
+}
+ 
+.feature-icon {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+ 
+.feature-card h3 {
+    font-size: 1.3em;
+    margin-bottom: 16px;
+    color: inherit;
+}
+ 
+.feature-card p {
+    flex-grow: 1;           /* Paragraph takes available space */
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+ 
+/* Card footer with badge alignment */
+.card-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;       /* Push to bottom */
+}
+ 
+.feature-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: 600;
+    background-color: #e9ecef;
+    color: #495057;
+}
+ 
+.feature-badge.premium {
+    background-color: #ffd700;
+    color: #333;
+}
+ 
+.featured .feature-badge {
+    background-color: rgba(255,255,255,0.2);
+    color: white;
+}
+ 
+/* Responsive design */
+@media (max-width: 1024px) {
+    .navbar-nav {
+        gap: 20px;
+    }
+    
+    .features-grid {
+        gap: 24px;
+    }
+    
+    .feature-card {
+        flex: 1 1 280px;
+    }
+}
+ 
+@media (max-width: 768px) {
+    /* Hide main navigation on mobile */
+    .navbar-nav,
+    .navbar-actions {
+        display: none;
+    }
+    
+    /* Show mobile menu button */
+    .mobile-menu-btn {
+        display: flex;
+    }
+    
+    /* Stack navbar vertically if needed */
+    .navbar {
+        flex-wrap: wrap;
+    }
+    
+    /* Hero adjustments */
+    .hero-content h1 {
+        font-size: 2.2em;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-buttons .btn {
+        width: 200px;
+    }
+    
+    /* Single column cards on mobile */
+    .features-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .feature-card {
+        flex: none;
+        width: 100%;
+        max-width: 400px;
+    }
+}
+ 
+@media (max-width: 480px) {
+    .navbar {
+        padding: 12px 16px;
+    }
+    
+    .container {
+        padding: 0 16px;
+    }
+    
+    .hero-section {
+        padding: 40px 16px;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.8em;
+    }
+    
+    .features-section {
+        padding: 60px 0;
+    }
+    
+    .feature-card {
+        padding: 24px 20px;
+        min-height: 250px;
+    }
+}

@@ -6,14 +6,14 @@
     <title>About Us - Tatua Solutions</title>
     <meta name="description" content="Learn about Tatua's mission to eliminate support chaos and meet our team of enterprise support experts.">
     <link rel="icon" type="image/x-icon" href="/assets/tatua-favicon.png" />
-    <link rel="stylesheet" href="styles/styles.css" /> 
+    <link rel="stylesheet" href="styles/index.css" /> 
     <link rel="stylesheet" href="/styles/about.css">
 </head>
 <body>
      <!--  Header Navigation  -->
   <header>
     <nav class="navbar" aria-label="Main navigation">
-      <a href="homepage.html" class="logo-link" aria-label="Tatua Home">
+      <a href="https://raddames-tonui-portfolio.vercel.app" target="_blank" class="logo-link" aria-label="Tatua Home">
         <img src="/assets/tatua-logo.png" alt="Tatua logo" class="logo" />
       </a>
       <ul class="nav-links">
@@ -22,6 +22,9 @@
         <li><a href="contact.html">Contact</a></li>
         <li><a href="case-studies.html">Case Studies</a></li>
         <li><a href="email-templates.html">Templates</a></li>
+        <li><button onclick="toggleTheme()" class="theme-toggle" aria-label="Toggle theme">
+        🌓 Theme
+        </button></li>
       </ul>
     </nav>
   </header>
@@ -145,12 +148,13 @@
 
   </main>
 
-    <!--  Footer  -->
-  <footer>
-    <p>&copy; 2025 Tatua Solutions Inc.</p>
-    <p>Email: <a href="mailto:hello@tatua.com">hello@tatua.com</a> | Phone: <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
-    <p>123 Innovation Drive, Suite 400, San Francisco, CA 94105</p>
-  </footer>
-    
+        <!--  Footer  -->
+    <footer class="footer">
+      <p>&copy; 2025 Tatua Solutions Inc.</p>
+      <p>Email: <a href="mailto:#">hello@tatua.com</a> | Phone: <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+      <p>123 Innovation Drive, Suite 400, San Francisco, CA 94105</p>
+    </footer>
+
+      <script src="./js/toggle-theme.js"></script>
 </body>
 </html>

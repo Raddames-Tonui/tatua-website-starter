@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="/styles/styles.css">    
-  <link rel="stylesheet" href="/styles/email.css">    
+  <link rel="stylesheet" href="/styles/index.css">    
+  <link rel="stylesheet" href="/styles/email-templates.css">    
 </head>
 <body>
 
     <!-- Header Navigation -->
   <header>
     <nav class="navbar" aria-label="Main navigation">
-      <a href="homepage.html" class="logo-link" aria-label="Tatua Home">
+      <a href="https://raddames-tonui-portfolio.vercel.app" target="_blank" class="logo-link" aria-label="Tatua Home">
         <img src="./assets/tatua-logo.png" alt="Tatua logo" class="logo" />
       </a>
       <ul class="nav-links">
@@ -21,6 +21,9 @@
         <li><a href="contact.html" >Contact</a></li>
         <li><a href="case-studies.html">Case Studies</a></li>
         <li><a href="email-templates.html" aria-current="page">Templates</a></li>
+        <li><button onclick="toggleTheme()" class="theme-toggle" aria-label="Toggle theme">
+        🌓 Theme
+        </button></li>
       </ul>
     </nav>
   </header>
@@ -34,7 +37,7 @@
       </ol>
     </nav>
 
-    <section aria-labelledby="preview-templates">
+    <section aria-labelledby="preview-templates" class="templates-list">
       <h1 id="preview-templates">Preview Templates</h1>
       <ul>
           <li><a href="/templates/welcome-email.html" target="_blank">Welcome Template</a></li>
@@ -44,5 +47,6 @@
     </section>
     </main>
   
+    <script src="./js/toggle-theme.js"></script>
 </body>
 </html>

@@ -1,6 +1,5 @@
 
 /* Case studies */
-
 .header-section h2{
     color: var(--text);
 } 
@@ -8,6 +7,23 @@
 section {
     margin: 0 auto;
     padding: 0 2rem ;
+}
+
+
+header {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background);
+  border-bottom: 1px solid #ccc;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+main {
+  padding-top: 0;
 }
 
 [id] {
@@ -29,7 +45,7 @@ section {
 
 
 .sidebar {
-    background-color: var(--accent-50);
+    /* background-color: var(--accent-50); */
     grid-area: sidebar;
     position: sticky;
     top: 0;
@@ -42,6 +58,9 @@ section {
     grid-area: case-studies-section;
     overflow-y: auto;
     padding-top: 2rem;
+    max-width: 90ch;
+    margin: 0 auto;
+    line-height: 1.6;
 }
 
 /* Responsive layout */
@@ -113,18 +132,97 @@ section {
 }
 
 /* CASE STUDIES */
- h2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  gap: 1rem; /* spacing between lines and title */
-  margin-top: 3rem;
+.case-studies {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Company Info */
+.Company-Information h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.3rem;
 }
 
 .Company-Information h3 {
-    text-align: center;
-    font-size: 1.4rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--primary-600);
+  margin: 0.2rem 0;
+}
+
+.Company-Information p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0.1rem 0;
+}
+
+/* Info sections (Challenge, Solution, Results) */
+.info {
+  margin-top: 1.5rem;
+}
+
+.info h3 {
+  font-size: 1.2rem;
+  color: var(--primary-700);
+  margin-bottom: 0.5rem;
+  border-left: 4px solid var(--primary-400);
+  padding-left: 0.6rem;
+}
+
+.info p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Results List */
+.info ol {
+  padding-left: 1.5rem;
+  margin-top: 0.8rem;
+}
+
+.info ol li {
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+}
+
+.info ol li strong {
+  color: var(--primary-700);
+}
+
+/* Blockquote (Testimonial) */
+.case-studies blockquote {
+  background: #f9f9f9;
+  /* border-left: 4px solid var(--primary-500); */
+  margin: 2rem 0 0;
+  padding: 1.2rem 1.5rem;
+  border-radius: 0.5rem;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: #444;
+  position: relative;
+}
+
+.case-studies blockquote::before {
+  content: "❝";
+  font-size: 2rem;
+  color: var(--primary-400);
+  position: absolute;
+  top: 0.5rem;
+  left: 0.8rem;
+}
+
+.case-studies blockquote footer {
+  font-style: normal;
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 0.8rem;
+  text-align: right;
 }
 
 /* ADDING Lines in title using pseudo elements */
@@ -137,52 +235,123 @@ section {
 }
 
 
-
-
 /* TABLES */
-.tables{
-    background-color: var(--background);
+.tables {
+  background-color: var(--background);
+  width: 100%;
+  overflow-x: auto; 
 }
 
-table{
-    margin: auto;
-     @media only screen and (min-width: 720px){
-            width:80%;
-    }
-    align-items: center;
-    justify-content: center;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
 }
+
 table caption {
-    font-weight: bold;
-    text-decoration: underline;
-    padding-bottom:1rem;
+  font-weight: bold;
+  text-decoration: underline;
+  padding-bottom: 1rem;
+  caption-side: top;
 }
 
-table, th, td {
-    border: 1px solid rgb(133, 133, 133);
-    border-collapse:collapse ;
-    padding: 0.3rem;
+table,
+th,
+td {
+  border: 1px solid rgb(133, 133, 133);
+  padding: 0.6rem;
+  text-align: left;
 }
 
 thead {
-    background-color: #e0e0e0;
+  background-color: var(--primary-200);
+}
+
+thead:hover {
+  background-color: var(--primary-200);
 }
 
 tr:nth-child(even) {
   background-color: #f5f5f5;
 }
 
+tbody tr:hover {
+  background-color: var(--primary-100);
+}
+
 
 /* ROI Section */
-.roi-section, .customers-say {
-    min-height: 40vh;
-    display: block;
-    margin: 0 auto;
-    line-height: 2rem;
+
+.roi-section {
+  background: var(--primary-50);  
+  border: 1px solid var(--primary-200);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.roi-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  margin-top: 0.3rem;
+}
+
+.roi-section p {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: var(--text-700);
 }
 
 .roi-section ul {
-    padding-left: 2em;
+  list-style: none;
+  padding: 0;
+}
+
+.roi-section li {
+  padding: 0.6rem 0;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.roi-section li::before {
+  content: "✔";
+  color: var(--primary-600);
+  font-weight: bold;
+}
+
+/* Testimonials */
+.customers-say {
+  margin: 3rem auto;
+  max-width: 900px;
+}
+
+.customers-say h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.customers-say blockquote {
+  background: #f9f9f9;
+  padding: 1.2rem 1.5rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  font-size: 1.1rem;
+  border-radius: 0.5rem;
+}
+
+.customers-say blockquote footer {
+  font-style: normal;
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 0.5rem;
+  text-align: right;
 }
 
 

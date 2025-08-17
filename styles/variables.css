@@ -14,7 +14,7 @@
   --text-100: #1f2937;
   --text-50: #4b5563;
   --radius: 6px;
-  --header-height: 125px;
+  --header-height: 50px;
 }
 
 /* Light theme primary palette */
@@ -48,8 +48,8 @@
   --primary-800: #251935;
   --primary-900: #0e0718;
 
-/* 
-  --primary-50: #fff6db;
+
+  /* --primary-50: #fff6db;
   --primary-100: #ffe5af;
   --primary-200: #fcd480;
   --primary-300: #fac350;

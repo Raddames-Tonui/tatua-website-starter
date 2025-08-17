@@ -3,21 +3,23 @@
 .hero {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   background: var(--accent-50);
   text-align: center;
+  align-items: center;
 }
 
 @media screen and (min-width: 769px) {
   .hero {
-    min-height: 90vh;
+    min-height: 100vh;
   }
 }
 
 .hero h1 {
   color: var(--primary-500);
   font-size: 2.5rem;
+  margin: 1rem 1rem; 
 }
 
 .hero p {
@@ -26,7 +28,7 @@
 }
 
 .hero-buttons {
-  margin: 2rem 1rem; 
+  margin: 1rem 1rem; 
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -133,7 +135,8 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  margin: 0  2rem 2rem 2rem;
+  margin: 0  auto 5rem;
+  width: 80vw;
 }
 
 .stats h2 {

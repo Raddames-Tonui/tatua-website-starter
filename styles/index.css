@@ -121,6 +121,7 @@ main {
   padding:2rem ;
   font-weight: 400;
 }
+
 .footer a{
   color: var(--background);
 }
@@ -190,7 +191,7 @@ a:hover {
 
 /* Header section with bg image */
 .header-section {
-  background-image: url('../assets/web.jpg');
+  /* background-image: url('../assets/web.jpg'); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
